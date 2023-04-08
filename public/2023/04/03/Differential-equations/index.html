@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/me.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/me.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/me.png">
+  <link rel="mask-icon" href="/images/me.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Times New Roman:300,300italic,400,400italic,700,700italic|Tahoma:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-mac-osx.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":5,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Interpolation1234567891011121314151617181920212223242526272829# Name: Mei Jiaojiao# Profession: Artificial Intelligence# Time and date: 4&#x2F;3&#x2F;23 19:06import numpy as npfrom scipy.interpolate import inte">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scipy implementation examples">
+<meta property="og:url" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/index.html">
+<meta property="og:site_name" content="Wintersweet">
+<meta property="og:description" content="Interpolation1234567891011121314151617181920212223242526272829# Name: Mei Jiaojiao# Profession: Artificial Intelligence# Time and date: 4&#x2F;3&#x2F;23 19:06import numpy as npfrom scipy.interpolate import inte">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/Interpolation.png">
+<meta property="og:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/Optimization.png">
+<meta property="og:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/Optimization%20with%20constraints.png">
+<meta property="og:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/Local%20Minima.png">
+<meta property="og:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/smooth_non_smooth.png">
+<meta property="og:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/Exact_vs_Noisy_Cost_Functions.png">
+<meta property="og:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/Constrained_vs_Unconstrained_Optimization.png">
+<meta property="article:published_time" content="2023-04-03T16:57:37.000Z">
+<meta property="article:modified_time" content="2023-04-07T02:43:50.464Z">
+<meta property="article:author" content="Mei Jiaojiao">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Scipy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.meijiaojiao.love/2023/04/03/Differential-equations/Interpolation.png">
+
+<link rel="canonical" href="http://www.meijiaojiao.love/2023/04/03/Differential-equations/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Scipy implementation examples | Wintersweet</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wintersweet</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Sometimes lose, sometimes win.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.meijiaojiao.love/2023/04/03/Differential-equations/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.png">
+      <meta itemprop="name" content="Mei Jiaojiao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wintersweet">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Scipy implementation examples
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-04-03 16:57:37" itemprop="dateCreated datePublished" datetime="2023-04-03T16:57:37+00:00">2023-04-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-04-07 02:43:50" itemprop="dateModified" datetime="2023-04-07T02:43:50+00:00">2023-04-07</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/04/03/Differential-equations/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/04/03/Differential-equations/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <html><head></head><body></body></html><html><head></head><body><h3 id="Interpolation"><a href="#Interpolation" class="headerlink" title="Interpolation"></a>Interpolation</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Name: Mei Jiaojiao</span></span><br><span class="line"><span class="comment"># Profession: Artificial Intelligence</span></span><br><span class="line"><span class="comment"># Time and date: 4/3/23 19:06</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> interp1d</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate some random data</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, num=<span class="number">11</span>, endpoint=<span class="literal">True</span>)</span><br><span class="line">y = np.cos(-x**<span class="number">2</span>/<span class="number">9.0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create an interpolation function</span></span><br><span class="line">f = interp1d(x, y, kind=<span class="string">'cubic'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate new x values to interpolate at</span></span><br><span class="line">x_new = np.linspace(<span class="number">0</span>, <span class="number">10</span>, num=<span class="number">41</span>, endpoint=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use the interpolation function to generate y values</span></span><br><span class="line">y_new = f(x_new)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the original data and interpolated data</span></span><br><span class="line">plt.plot(x, y, <span class="string">'o'</span>, label=<span class="string">'Original Data'</span>)</span><br><span class="line">plt.plot(x_new, y_new, label=<span class="string">'Interpolated Data'</span>)</span><br><span class="line">plt.title(<span class="string">'Cubic Interpolation'</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line">plt.savefig(<span class="string">'Interpolation.png'</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">'tight'</span>, pad_inches=<span class="number">0.1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img alt="Interpolation" data-src="/2023/04/03/Differential-equations/Interpolation.png"></p>
+<h3 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Name: Mei Jiaojiao</span></span><br><span class="line"><span class="comment"># Profession: Artificial Intelligence</span></span><br><span class="line"><span class="comment"># Time and date: 4/3/23 20:01</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the function to be optimized</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x ** <span class="number">2</span> + <span class="number">3</span> * np.sin(x)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Use the minimize function from scipy.optimize to find the minimum of the function</span></span><br><span class="line">result = minimize(f, x0=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate some data for plotting</span></span><br><span class="line">x_vals = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">y_vals = f(x_vals)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the function and the optimized point</span></span><br><span class="line">plt.plot(x_vals, y_vals, label=<span class="string">'Function'</span>)</span><br><span class="line">plt.scatter(result.x, result.fun, color=<span class="string">'red'</span>, label=<span class="string">'Optimized Point'</span>)</span><br><span class="line">plt.title(<span class="string">'Optimization'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.savefig(<span class="string">'Optimization.png'</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">'tight'</span>, pad_inches=<span class="number">0.1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img alt="Optimization" data-src="/2023/04/03/Differential-equations/Optimization.png"></p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Name: Mei Jiaojiao</span></span><br><span class="line"><span class="comment"># Profession: Artificial Intelligence</span></span><br><span class="line"><span class="comment"># Time and date: 4/3/23 20:03</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> Axes3D</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the function</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> (<span class="number">4</span> - <span class="number">2.1</span> * x[<span class="number">0</span>] ** <span class="number">2</span> + x[<span class="number">0</span>] ** <span class="number">4</span> / <span class="number">3</span>) * x[<span class="number">0</span>] ** <span class="number">2</span> + x[<span class="number">0</span>] * x[<span class="number">1</span>] + (<span class="number">4</span> * x[<span class="number">1</span>] ** <span class="number">2</span> - <span class="number">4</span>) * x[<span class="number">1</span>] ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the bounds</span></span><br><span class="line">bounds = [(-<span class="number">2</span>, <span class="number">2</span>), (-<span class="number">1</span>, <span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Find the global minimum</span></span><br><span class="line">res1 = minimize(f, x0=[<span class="number">1</span>, -<span class="number">1</span>], bounds=bounds)</span><br><span class="line">res2 = minimize(f, x0=[-<span class="number">1</span>, <span class="number">1</span>], bounds=bounds)</span><br><span class="line">res3 = minimize(f, x0=[<span class="number">0</span>, <span class="number">0</span>], bounds=bounds)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the function's 3D surface and contour</span></span><br><span class="line">x = np.linspace(-<span class="number">2</span>, <span class="number">2</span>, <span class="number">100</span>)</span><br><span class="line">y = np.linspace(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">100</span>)</span><br><span class="line">X, Y = np.meshgrid(x, y)</span><br><span class="line">Z = f([X, Y])</span><br><span class="line">fig = plt.figure(figsize=(<span class="number">12</span>, <span class="number">6</span>))</span><br><span class="line">ax1 = fig.add_subplot(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, projection=<span class="string">'3d'</span>)</span><br><span class="line">ax1.plot_surface(X, Y, Z, cmap=<span class="string">'coolwarm'</span>, alpha=<span class="number">0.8</span>)</span><br><span class="line">ax1.set_xlabel(<span class="string">'x'</span>)</span><br><span class="line">ax1.set_ylabel(<span class="string">'y'</span>)</span><br><span class="line">ax1.set_zlabel(<span class="string">'f(x, y)'</span>)</span><br><span class="line">ax1.set_title(<span class="string">'3D Surface'</span>)</span><br><span class="line"><span class="comment"># colorbar</span></span><br><span class="line">m = plt.cm.ScalarMappable(cmap=<span class="string">'coolwarm'</span>)</span><br><span class="line">fig.colorbar(m, ax=ax1)</span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">ax2.contourf(X, Y, Z, <span class="number">50</span>, cmap=<span class="string">'coolwarm'</span>)</span><br><span class="line">ax2.set_xlabel(<span class="string">'x'</span>)</span><br><span class="line">ax2.set_ylabel(<span class="string">'y'</span>)</span><br><span class="line">ax2.set_title(<span class="string">'Contourf for f(x, y)'</span>)</span><br><span class="line"><span class="comment"># plot global minimum</span></span><br><span class="line">ax2.scatter(res1.x[<span class="number">0</span>], res1.x[<span class="number">1</span>], color=<span class="string">'red'</span>, label=<span class="string">'Global minimum with initial guess[1, -1]'</span>, marker=<span class="string">'*'</span>, s=<span class="number">200</span>)</span><br><span class="line">ax2.scatter(res2.x[<span class="number">0</span>], res2.x[<span class="number">1</span>], color=<span class="string">'orange'</span>, label=<span class="string">'Global minimum with initial guess[-1, 1]'</span>, marker=<span class="string">'*'</span>, s=<span class="number">200</span>)</span><br><span class="line">ax2.scatter(res3.x[<span class="number">0</span>], res3.x[<span class="number">1</span>], color=<span class="string">'cyan'</span>, label=<span class="string">'Global minimum with initial guess[0, 0]'</span>, marker=<span class="string">'*'</span>, s=<span class="number">200</span>)</span><br><span class="line">ax2.legend()</span><br><span class="line"><span class="comment"># move the legend</span></span><br><span class="line">ax2.legend(bbox_to_anchor=(<span class="number">0</span>, <span class="number">1</span>), loc=<span class="string">'upper left'</span>, borderaxespad=<span class="number">0</span>)</span><br><span class="line"><span class="comment"># colorbar</span></span><br><span class="line">fig.colorbar(m, ax=ax2)</span><br><span class="line">plt.savefig(<span class="string">'Optimization with constraints.png'</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">'tight'</span>, pad_inches=<span class="number">0.1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img alt="Optimization with constraints" data-src="/2023/04/03/Differential-equations/Optimization%20with%20constraints.png"></p>
+<h3 id="Local-minima-and-global-minima"><a href="#Local-minima-and-global-minima" class="headerlink" title="Local minima and global minima"></a>Local minima and global minima</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Name: Mei Jiaojiao</span></span><br><span class="line"><span class="comment"># Profession: Artificial Intelligence</span></span><br><span class="line"><span class="comment"># Time and date: 4/3/23 20:27</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.signal <span class="keyword">import</span> find_peaks</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the function to find the minima of</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">my_function</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> np.sin(x) + np.sin(<span class="number">2</span> * x) + np.sin(<span class="number">4</span> * x) + np.sqrt(<span class="built_in">abs</span>(x))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate x values for the function</span></span><br><span class="line">x = np.linspace(-<span class="number">3</span>, <span class="number">6</span> * np.pi, <span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the function</span></span><br><span class="line">plt.plot(x, my_function(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Find the global minimum of the function</span></span><br><span class="line">global_min = np.<span class="built_in">min</span>(my_function(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the global minimum as a red dot</span></span><br><span class="line">plt.plot(x[np.argmin(my_function(x))], global_min, <span class="string">'ro'</span>, label=<span class="string">'Global Minimum'</span>,markersize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Find the local minima of the function</span></span><br><span class="line">local_mins, _ = find_peaks(-my_function(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the local minima as blue dots</span></span><br><span class="line">plt.plot(x[local_mins], my_function(x)[local_mins], <span class="string">'bo'</span>, label=<span class="string">'Local Minima'</span>,markersize=<span class="number">7</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add a legend to the plot</span></span><br><span class="line">plt.legend([<span class="string">'Function'</span>, <span class="string">'Global Minimum'</span>, <span class="string">'Local Minima'</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show the plot</span></span><br><span class="line">plt.savefig(<span class="string">'Local Minima.png'</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">'tight'</span>, pad_inches=<span class="number">0.1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img alt="Local Minima" data-src="/2023/04/03/Differential-equations/Local%20Minima.png"></p>
+<h3 id="Smooth-and-non-smooth"><a href="#Smooth-and-non-smooth" class="headerlink" title="Smooth and non-smooth"></a>Smooth and non-smooth</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Name: Mei Jiaojiao</span></span><br><span class="line"><span class="comment"># Profession: Artificial Intelligence</span></span><br><span class="line"><span class="comment"># Time and date: 4/3/23 21:03</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate some sample data</span></span><br><span class="line">x = np.linspace(-<span class="number">5</span>, <span class="number">5</span>, <span class="number">100</span>)</span><br><span class="line">y_smooth = np.sin(x)</span><br><span class="line">y_non_smooth = np.<span class="built_in">abs</span>(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a plot with two subplots</span></span><br><span class="line">fig, axs = plt.subplots(<span class="number">1</span>, <span class="number">2</span>, figsize=(<span class="number">10</span>, <span class="number">5</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the smooth function in the first subplot</span></span><br><span class="line">axs[<span class="number">0</span>].plot(x, y_smooth)</span><br><span class="line">axs[<span class="number">0</span>].set_title(<span class="string">"Smooth Function"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the non-smooth function in the second subplot</span></span><br><span class="line">axs[<span class="number">1</span>].plot(x, y_non_smooth)</span><br><span class="line">axs[<span class="number">1</span>].set_title(<span class="string">"Non-Smooth Function"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add labels and a title to the overall figure</span></span><br><span class="line">fig.suptitle(<span class="string">"Smooth vs Non-Smooth Functions"</span>)</span><br><span class="line">fig.text(<span class="number">0.5</span>, <span class="number">0.04</span>, <span class="string">"x"</span>, ha=<span class="string">"center"</span>)</span><br><span class="line">fig.text(<span class="number">0.04</span>, <span class="number">0.5</span>, <span class="string">"y"</span>, va=<span class="string">"center"</span>, rotation=<span class="string">"vertical"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show the plot</span></span><br><span class="line">plt.savefig(<span class="string">'smooth_non_smooth.png'</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">'tight'</span>, pad_inches=<span class="number">0.1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img alt="smooth_non_smooth" data-src="/2023/04/03/Differential-equations/smooth_non_smooth.png"></p>
+<h3 id="Noisy-versus-exact-cost-functions"><a href="#Noisy-versus-exact-cost-functions" class="headerlink" title="Noisy versus exact cost functions"></a>Noisy versus exact cost functions</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Name: Mei Jiaojiao</span></span><br><span class="line"><span class="comment"># Profession: Artificial Intelligence</span></span><br><span class="line"><span class="comment"># Time and date: 4/3/23 21:04</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the exact and noisy cost functions</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">exact_cost</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> np.sin(x)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">noisy_cost</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> np.sin(x) + np.random.normal(scale=<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate data</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">100</span>)</span><br><span class="line">exact_y = exact_cost(x)</span><br><span class="line">noisy_y = np.array([noisy_cost(xi) <span class="keyword">for</span> xi <span class="keyword">in</span> x])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the exact and noisy cost functions</span></span><br><span class="line">plt.plot(x, exact_y, label=<span class="string">'Exact Cost'</span>)</span><br><span class="line">plt.plot(x, noisy_y, label=<span class="string">'Noisy Cost'</span>)</span><br><span class="line">plt.title(<span class="string">'Exact vs Noisy Cost Functions'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'x'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'y'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.savefig(<span class="string">'Exact_vs_Noisy_Cost_Functions.png'</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">'tight'</span>, pad_inches=<span class="number">0.1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img alt="Exact_vs_Noisy_Cost_Functions" data-src="/2023/04/03/Differential-equations/Exact_vs_Noisy_Cost_Functions.png"></p>
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Name: Mei Jiaojiao</span></span><br><span class="line"><span class="comment"># Profession: Artificial Intelligence</span></span><br><span class="line"><span class="comment"># Time and date: 4/3/23 21:07</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the objective function</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">objective_function</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> (x[<span class="number">0</span>] - <span class="number">2</span>) ** <span class="number">2</span> + (x[<span class="number">1</span>] - <span class="number">2</span>) ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the bounds of the search space</span></span><br><span class="line">bounds = ((-<span class="number">1</span>, <span class="number">1</span>), (-<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the constrained optimization problem</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">constrained_optimization</span>():</span><br><span class="line">    res = minimize(objective_function, x0=(<span class="number">0</span>, <span class="number">0</span>), bounds=bounds)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the unconstrained optimization problem</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">unconstrained_optimization</span>():</span><br><span class="line">    res = minimize(objective_function, x0=(<span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the objective function and the search space</span></span><br><span class="line">x = np.linspace(-<span class="number">2</span>, <span class="number">4</span>, <span class="number">100</span>)</span><br><span class="line">y = np.linspace(-<span class="number">2</span>, <span class="number">4</span>, <span class="number">100</span>)</span><br><span class="line">X, Y = np.meshgrid(x, y)</span><br><span class="line">Z = objective_function((X, Y))</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots()</span><br><span class="line">cmap = plt.get_cmap(<span class="string">'viridis'</span>)</span><br><span class="line">cf = ax.contourf(X, Y, Z, cmap=cmap, levels=<span class="number">20</span>)</span><br><span class="line">fig.colorbar(cf, ax=ax)</span><br><span class="line">ax.set_title(<span class="string">'Objective Function'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the search space</span></span><br><span class="line">ax.plot([-<span class="number">1</span>, <span class="number">1</span>], [-<span class="number">1</span>, -<span class="number">1</span>], <span class="string">'k'</span>, linewidth=<span class="number">2</span>)</span><br><span class="line">ax.plot([-<span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>], <span class="string">'k'</span>, linewidth=<span class="number">2</span>)</span><br><span class="line">ax.plot([-<span class="number">1</span>, -<span class="number">1</span>], [-<span class="number">1</span>, <span class="number">1</span>], <span class="string">'k'</span>, linewidth=<span class="number">2</span>)</span><br><span class="line">ax.plot([<span class="number">1</span>, <span class="number">1</span>], [-<span class="number">1</span>, <span class="number">1</span>], <span class="string">'k'</span>, linewidth=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the constrained minimum</span></span><br><span class="line">res_constrained = constrained_optimization()</span><br><span class="line">ax.plot(res_constrained.x[<span class="number">0</span>], res_constrained.x[<span class="number">1</span>], <span class="string">'ro'</span>, label=<span class="string">'Constrained Minimum'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot the unconstrained minimum</span></span><br><span class="line">res_unconstrained = unconstrained_optimization()</span><br><span class="line">ax.plot(res_unconstrained.x[<span class="number">0</span>], res_unconstrained.x[<span class="number">1</span>], <span class="string">'bo'</span>, label=<span class="string">'Unconstrained Minimum'</span>)</span><br><span class="line"></span><br><span class="line">ax.legend()</span><br><span class="line">plt.savefig(<span class="string">'Constrained_vs_Unconstrained_Optimization.png'</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">'tight'</span>, pad_inches=<span class="number">0.1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img alt="Constrained_vs_Unconstrained_Optimization" data-src="/2023/04/03/Differential-equations/Constrained_vs_Unconstrained_Optimization.png"></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><em>Scipy Lecture Notes — Scipy lecture notes</em>. (n.d.). Scipy Lecture Notes — Scipy Lecture Notes. <a target="_blank" rel="noopener" href="https://scipy-lectures.org/index.html#one-document-to-learn-numerics-science-and-data-with-python">https://scipy-lectures.org/index.html#one-document-to-learn-numerics-science-and-data-with-python</a></li>
+</ol>
+</body></html>
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Mei Jiaojiao
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://www.meijiaojiao.love/2023/04/03/Differential-equations/" title="Scipy implementation examples">http://www.meijiaojiao.love/2023/04/03/Differential-equations/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Math/" rel="tag"># Math</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Scipy/" rel="tag"># Scipy</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2023/04/03/Functions/" rel="next" title="Functions">
+                  <i class="fa fa-chevron-left"></i> Functions
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2023/04/03/Scipy-optimization/" rel="prev" title="Scipy optimization">
+                  Scipy optimization <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Interpolation"><span class="nav-number">1.</span> <span class="nav-text">Interpolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Optimization"><span class="nav-number">2.</span> <span class="nav-text">Optimization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Local-minima-and-global-minima"><span class="nav-number">3.</span> <span class="nav-text">Local minima and global minima</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Smooth-and-non-smooth"><span class="nav-number">4.</span> <span class="nav-text">Smooth and non-smooth</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Noisy-versus-exact-cost-functions"><span class="nav-number">5.</span> <span class="nav-text">Noisy versus exact cost functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constraints"><span class="nav-number">6.</span> <span class="nav-text">Constraints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">7.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="Mei Jiaojiao"
+    src="/images/me.png">
+  <p class="site-author-name" itemprop="name">Mei Jiaojiao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mei Jiaojiao</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="Symbols count total">24k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes: 0,
+          toolbar: 0,
+          statusbar: 0,
+          pagemode: 'thumbs',
+          view: 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://wintersweet.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  function loadComments() {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "http://www.meijiaojiao.love/2023/04/03/Differential-equations/",
+            identifier: "2023/04/03/Differential-equations/",
+            title: "Scipy implementation examples"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://wintersweet.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  }
+    (function() {
+      var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        var disqus_scroll = () => {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
+          var scrollTop = window.scrollY;
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            window.removeEventListener('scroll', disqus_scroll);
+            loadComments();
+          }
+        };
+        window.addEventListener('scroll', disqus_scroll);
+      }
+    })();
+  
+</script>
+
+</body>
+</html>
