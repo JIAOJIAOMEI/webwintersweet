@@ -1,7 +1,7 @@
 (function() {
     //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
-    let warningDay = 2;
-    let errorDay = 4;
+    let warningDay = 30;
+    let errorDay = 365;
     // 确保能够获取到文章时间以及在文章详情页
     let times = document.getElementsByTagName('time');
     if (times.length === 0) { return; }
