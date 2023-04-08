@@ -320,7 +320,7 @@ cheers: true
 tagcloud:
   # All values below are same as default, change them by yourself.
   min: 12 # Minimun font size in px
-  max: 30 # Maxium font size in px
+  max: 50 # Maxium font size in px
   start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
   end: "#111" # End color (hex, rgba, hsla or color keywords)
   amount: 200 # Amount of tags, change it if you have more than 200 tags
@@ -364,7 +364,7 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: night blue
+  highlight_theme: night eighties
   # Add copy button on codeblock
   copy_button:
     enable: true
@@ -399,9 +399,9 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
-  title: Follow me on GitHub
+  enable: true
+  permalink: https://github.com/JIAOJIAOMEI
+  title: See me on GitHub
 
 
 # ---------------------------------------------------------------
@@ -435,10 +435,10 @@ font:
     size: 12px
 
   # Font settings for site title (.site-title).
-  title: 
+  title:
     external: true
     family: Lato
-    size: 16px 
+    size: 16px
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
@@ -923,7 +923,7 @@ vendors:
   # Internal version: 3.1.0
   # Example:
   # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
-  anime: 
+  anime:
 
   # Internal version: 4.7.0
   # Example:
