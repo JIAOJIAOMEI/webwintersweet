@@ -2,6 +2,7 @@
 mathjax: true
 title: Scipy optimization
 date: 2023-04-03 19:57:07
+hidden: true
 tags:
   - Scipy
   - Python
