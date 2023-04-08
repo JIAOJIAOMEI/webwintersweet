@@ -291,7 +291,7 @@ reward:
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
   enable: true
-  title: related posts # Custom header, leave empty to use the default one
+  title: Related posts # Custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
