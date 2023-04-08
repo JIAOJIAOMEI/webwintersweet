@@ -1,6 +1,7 @@
 ---
 title: About me
 date: 2023-04-07 01:41:17
+type: about
 comments: false
 ---
 
