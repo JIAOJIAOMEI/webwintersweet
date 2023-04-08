@@ -2,7 +2,7 @@
 mathjax: true
 title: Scipy optimization
 date: 2023-04-03 19:57:07
-hidden: true
+hidden: false
 tags:
   - Scipy
   - Python
@@ -11,8 +11,6 @@ tags:
 ---
 
 ### Brent’s method on a quadratic function
-
-{% spoiler " see the python code" %}
 
 ```python
 # Name: Mei Jiaojiao
@@ -53,8 +51,6 @@ plt.tight_layout()
 plt.savefig('minimize_scalar.png', dpi=300, bbox_inches='tight', pad_inches=0.1)
 plt.show()
 ```
-
-{% endspoiler %}
 
 ![minimize_scalar](Scipy-optimization/minimize_scalar.png)
 
