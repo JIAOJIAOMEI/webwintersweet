@@ -132,7 +132,7 @@ menu:
   archives: /archives/|| archive              # no space between / and ||
   #schedule: /schedule/|| calendar       # no space between / and ||
   #sitemap: /sitemap.xml|| sitemap       # no space between / and ||
-  commonweal: /404/|| heartbeat       # no space between / and ||
+  #commonweal: /404/|| heartbeat       # no space between / and ||
 
 
 
