@@ -2,7 +2,14 @@
 mathjax: true
 title: Linear equations
 date: 2023-03-28 09:47:39
-tags: [Linear algebra, linear regression, Linear equations]
+categories: Basic math
+comments: true
+description: This article discusses linear equations and their solutions. It starts by introducing the concept of a linear system and provides an example of how to solve a system of linear equations using the elimination method and matrices. The article also explains what a singular system of linear equations is and gives an example of such a system. It is a basic introduction to linear algebra and is relevant for those interested in fields such as machine learning, data science, and engineering.
+tags: 
+  - Linear algebra
+  - Linear regression
+  - Linear equations 
+  - Matrix
 ---
 
 ### Linear system

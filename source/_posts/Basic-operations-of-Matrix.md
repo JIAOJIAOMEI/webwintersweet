@@ -2,7 +2,13 @@
 mathjax: true
 title: Basic operations of Matrix
 date: 2023-03-27 18:42:35
-tags: [Matrix, Linear combination, Basics]
+categories: Basic math
+comments: true
+description: The article covers basic operations of matrices including transpose, vector and matrix addition, scalar multiplication, linear combination, dot product, matrix multiplication, identity matrix, and matrix inverse. It provides definitions, examples, and formulas for each operation.
+tags: 
+  - Matrix
+  - Linear combination
+  - Linear algebra
 ---
 
 ### Matrix transpose

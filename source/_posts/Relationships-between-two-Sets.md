@@ -1,6 +1,9 @@
 ---
 mathjax: true
 title: Relationships between two Sets
+categories: Basic math
+comments: true
+description: The code shows how to create Venn diagrams in Python using the matplotlib_venn library. It also demonstrates how to calculate cardinality and visualize the Cartesian product of two sets.
 date: 2023-04-03 15:21:07
 tags:
   - Set

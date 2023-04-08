@@ -2,7 +2,13 @@
 mathjax: true
 title: Image processing using Numpy
 date: 2023-03-28 07:10:36
-tags: [Python, Numpy, Image processing]
+categories: Python skills
+comments: true
+description: The article is about image processing using NumPy in Python. It demonstrates how to manipulate and process images using NumPy arrays. The first section shows how to change the order of the RGB channels in an image, creating new images in GBR, BRG, and RBG order. The second section shows how to extract and display the individual red, green, and blue channels of an image, and then convert the color image to grayscale using NumPy's dot product function. The article provides sample code for each task and includes visual examples of the output.
+tags: 
+  - Python
+  - Numpy
+  - Image processing
 ---
 
 ### Change the oder of RGB

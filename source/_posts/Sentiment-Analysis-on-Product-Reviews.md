@@ -2,6 +2,9 @@
 mathjax: true
 title: Sentiment Analysis on Product Reviews
 date: 2023-04-01 21:59:48
+categories: Machine learning
+comments: true
+description: This Python code performs sentiment analysis on product reviews using several machine learning classifiers, including MLP classifier, Naive Bayes classifier, SVM, Random Forest, Logistic Regression, K-Nearest Neighbors, Decision Tree, AdaBoost, and Gradient Boosting.
 tags:
   - Sentiment analysis
   - MLP classifier

@@ -2,6 +2,9 @@
 mathjax: true
 title: Functions
 date: 2023-04-03 15:44:27
+categories: Basic math
+comments: true
+description: This article provides examples and code snippets to explain different types of mathematical functions, including one-to-one, increasing/decreasing, even/odd, convex/concave, exponential/logarithmic, and floor/ceiling functions. The article also includes visualizations and annotations to help illustrate the concepts.
 tags:
   - Functions
   - Math

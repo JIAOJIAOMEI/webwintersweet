@@ -2,7 +2,14 @@
 mathjax: true
 title: Variables
 date: 2023-03-27 22:04:26
-tags: [Probabilities, Variables, Uniform distribution, Normal distribution, Basics]
+tags: 
+  - Probabilities
+  - Variables
+  - Uniform distribution
+  - Normal distribution
+description: This article covers probability density functions for different distributions, including the continuous uniform distribution, normal distribution, and bivariate normal distribution. The code snippets are written in Python and demonstrate how to plot the PDFs using various techniques such as color maps and 3D projections. 
+categories: Basic math 
+comments: true
 ---
 
 ### Uniform distribution

@@ -2,7 +2,14 @@
 mathjax: true
 title: Functions Plot
 date: 2023-03-28 08:21:10
-tags: [Functions, Python, Numpy, Matplotlib ]
+categories: Python skills
+comments: true
+description: The article demonstrates how to plot various mathematical functions in 2D and 3D using Python, Numpy, and Matplotlib. It includes examples of straight lines, quadratic curves, sine waves, and Gaussian curves in 2D, and three complex 3D functions plotted using meshgrid and surface plot techniques.
+tags: 
+  - Functions
+  - Python
+  - Numpy
+  - Matplotlib 
 ---
 
 ### Line and curves

@@ -2,7 +2,10 @@
 mathjax: true
 title: Gradient descend for linear regression
 date: 2023-03-28 20:09:58
-top: 1
+categories: Machine learning
+comments: true
+description: This article explains the concept of gradient descent in linear regression, including the importance of loss functions, mean squared error, and distance metrics. It includes code examples and visualizations to help illustrate the concepts. The article is aimed at readers with some basic knowledge of machine learning and optimization.
+top: 10
 tags:
   - Gradient descend
   - Linear regression

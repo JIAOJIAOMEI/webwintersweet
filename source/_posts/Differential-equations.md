@@ -2,6 +2,10 @@
 mathjax: true
 title: Scipy implementation examples
 date: 2023-04-03 16:57:37
+categories: Basic math
+comments: true
+description: This article provides examples of how to use Scipy, a Python library for scientific computing, to perform various numerical operations such as interpolation, optimization, finding local and global minima, comparing smooth and non-smooth functions, dealing with noisy cost functions, and solving constrained optimization problems. The examples include code snippets and corresponding visualizations.
+top: 5
 tags:
   - Math
   - Python

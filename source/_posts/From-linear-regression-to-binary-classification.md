@@ -1,6 +1,9 @@
 ---
 mathjax: true
 title: From linear regression to binary classification
+categories: Machine learning
+comments: true
+description: This article discusses the relationship between linear regression and binary classification. It shows how to transform a regression problem into a binary classification problem and introduces the sigmoid function to map the results to the range of 0-1. It also discusses the concept of decision boundaries and how they can be adjusted depending on the specific application.
 date: 2023-03-29 12:22:17
 tags: 
   - Linear regression

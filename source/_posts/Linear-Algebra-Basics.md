@@ -2,7 +2,13 @@
 mathjax: true
 title: Scalar, Vector, Matrix, Tensor
 date: 2023-03-27 18:03:48
-tags: [Linear algebra, Matrix, Python, Basics]
+categories: Basic math
+comments: true
+description: The article is a brief introduction to some basic concepts in linear algebra. It defines scalars, vectors, matrices, and tensors, and provides examples of each. The article explains how to represent and visualize 2D vectors using Python code, and includes formulas for calculating the length of a 2D vector. The article also briefly discusses the use of matrices and tensors to represent data, systems of linear equations, and multidimensional arrays.
+tags: 
+  - Linear algebra
+  - Matrix
+  - Python
 ---
 
 Scalars: A scalar is a quantity that has only magnitude and no direction. It is a single value that can be represented by a number. 

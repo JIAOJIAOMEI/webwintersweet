@@ -2,7 +2,13 @@
 mathjax: true
 title: Numpy Basics
 date: 2023-03-28 06:14:24
-tags: [Python, Numpy, Basics, Array]
+categories: Python skills
+comments: true
+description: The article is a beginner's guide to working with NumPy, a powerful Python library for numerical computing. It covers creating 1D and 2D arrays using various methods, checking the attributes of arrays, basic operations on arrays, indexing and slicing arrays, and stacking and splitting arrays. The article provides code examples and outputs to demonstrate the different features and functions of NumPy.
+tags: 
+  - Python
+  - Numpy 
+  - Matrix
 ---
 
 ### Create 1D array using Numpy

@@ -2,7 +2,13 @@
 mathjax: true
 title: Hyperplane
 date: 2023-03-28 13:52:39
-tags: [Linear algebra, Logistic regression, Hyperplane]
+categories: Basic math
+comments: true
+description: This article introduces the concept of hyperplane in mathematics and its application in binary classification problems.
+tags: 
+  - Linear algebra
+  - Logistic regression
+  - Hyperplane
 ---
 
 In mathematics, a hyperplane is a subspace of one dimension less than its ambient space. This means that in an n-dimensional space, a hyperplane is an (n-1)-dimensional subspace.

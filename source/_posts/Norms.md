@@ -2,7 +2,13 @@
 mathjax: true
 title: Norm
 date: 2023-03-27 20:31:29
-tags: [Matrix, Norm, Basics]
+categories: Basic math
+comments: true
+description: This is a description of different norms used in linear algebra to measure the size or magnitude of vectors and matrices. The p-norm of a vector is defined as the sum of the absolute values of its components raised to the power of p and then taking the pth root of the sum. When p=2, the norm is called the Euclidean norm, and when p=1, it's called the Manhattan or taxicab norm. The Frobenius norm of a matrix is defined as the square root of the sum of the squares of all the elements in the matrix, while the spectral norm is the maximum singular value of the matrix. Other norms like the max column sum and max row sum are also briefly discussed. Python code is provided to calculate the norms for vectors and matrices, and to plot the distance between two points using the Manhattan and Euclidean norms.
+tags: 
+  - Matrix
+  - Norm
+  - Python
 ---
 
 ### Norm for a vector

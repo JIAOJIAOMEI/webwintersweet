@@ -2,7 +2,13 @@
 mathjax: true
 title: Pandas Basics
 date: 2023-03-28 08:57:53
-tags: [Pandas, Python, Basics]
+categories: Python skills
+comments: true
+description: This code demonstrates basic operations of the Pandas library on the iris dataset. It includes loading the dataset, converting it to a dataframe, displaying rows and columns of the dataframe, selecting specific rows and columns by label or integer position, selecting rows based on conditions, and checking for missing values. It also includes using Seaborn to visualize the distribution of each column in the dataset.
+tags: 
+  - Pandas
+  - Python
+  - Matrix
 ---
 
 The iris dataset is a well-known multivariate dataset that contains 150 observations of iris flowers. Each observation includes four features: sepal length, sepal width, petal length, and petal width. The dataset also includes the species of the flower, which serves as the response variable. There are three species of iris in the dataset: setosa, versicolor, and virginica. Overall, the iris dataset is commonly used for classification and machine learning tasks, as well as for data visualization and exploratory analysis.

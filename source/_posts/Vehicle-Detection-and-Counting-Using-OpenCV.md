@@ -3,12 +3,14 @@ mathjax: true
 title: Vehicle Detection and Counting Using OpenCV
 date: 2023-04-01 13:29:31
 tags:
-  - Opencv
+  - OpenCv
   - Python
   - Video processing
   - Image processing
   - Detection
-
+description: This Python script uses computer vision techniques to load a video file, remove the background, track vehicles, and count the number of vehicles passing a detection line. It can be applied to traffic monitoring, security surveillance, and vehicle tracking systems to enhance safety and efficiency. 
+categories: Machine learning
+comments: true
 ---
 
 The code is a Python script that uses computer vision techniques to perform the following tasks:

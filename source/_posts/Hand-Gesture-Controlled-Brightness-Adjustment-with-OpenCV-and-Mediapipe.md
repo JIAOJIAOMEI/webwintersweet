@@ -2,6 +2,9 @@
 mathjax: true
 title: Hand Gesture Controlled Brightness Adjustment
 date: 2023-04-02 21:09:27
+categories: Machine learning
+comments: true
+description: The article presents a Python code that implements a hand gesture-controlled brightness adjustment using OpenCV and Mediapipe libraries. The program detects the landmarks of the user's hands and tracks the movement of the index finger tips to adjust the brightness of the camera feed.
 tags:
   - Hand gesture
   - Mediapipe

@@ -3,13 +3,17 @@ mathjax: true
 title: Scipy optimization
 date: 2023-04-03 19:57:07
 hidden: false
+categories: Math
+comments: true
+description: The code contains four examples of optimization using Scipy library in Python, including Brent's method for quadratic and non-convex functions, CG method for the Rosenbrock function, and various methods for optimizing the Rosenbrock function with their progress and computing time recorded.
 tags:
   - Scipy
   - Python
   - Gradient
   - Optimization
+  - Rosenbrock
 ---
-
+The code consists of four examples of optimization using Scipy library in Python. The first example shows how to use Brent's method to minimize a quadratic function, both the function and the progress of optimization are plotted. The second example shows how to use Brent's method to minimize a non-convex function, again, the function and the progress of optimization are plotted. The third example shows how to use Conjugate Gradient (CG) method to minimize the Rosenbrock function, a famous benchmark function for optimization. The results are plotted in 3D surface plot, contour plot, and iterations plot. The fourth example shows how to optimize the Rosenbrock function using various methods, including gradient-based methods, trust-region methods, and global optimization methods. The progress of optimization is plotted for each method. The computing time for each method is also recorded and printed.
 ### Brent’s method on a quadratic function
 
 ```python

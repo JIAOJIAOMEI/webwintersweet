@@ -2,6 +2,9 @@
 mathjax: true
 title: Regression
 date: 2023-03-28 15:08:31
+categories: Machine learning
+comments: true
+description: The text provides an introduction to linear algebra and its applications in machine learning, including the concepts of matrix rank, span, correlation coefficients, and linear systems. It also uses an example of the Boston Housing dataset to illustrate these concepts.
 tags: 
   - Linear regression
   - Polynomial regression 

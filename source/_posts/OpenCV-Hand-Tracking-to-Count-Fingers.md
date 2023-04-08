@@ -2,6 +2,9 @@
 mathjax: true
 title: OpenCV Hand Tracking to Count Fingers
 date: 2023-04-01 16:18:59
+categories: Machine learning
+comments: true
+description: The program uses the Hand Tracking Module from CVzone to detect and count the number of fingers visible in a camera feed. It can detect up to two hands simultaneously and displays the number of fingers for each hand as well as the total number of fingers on the screen. The finger counts are displayed using OpenCV's putText function, and the loop stops when the user presses the 'q' key.
 tags:
   - Opencv
   - Python

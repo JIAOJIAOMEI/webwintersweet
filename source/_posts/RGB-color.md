@@ -2,7 +2,13 @@
 mathjax: true
 title: RGB color
 date: 2023-03-04 14:09:37
-tags: [Data visualization, Image processing, Basics]
+categories: Concepts about Images
+comments: true
+description: The code contains two examples related to RGB colors in Matplotlib. The first example plots a bar chart showing the RGB colors, white, black, and grayscale. The second example plots the 3D RGB color space using a meshgrid and scatter plot in Matplotlib.
+tags: 
+  - Data visualization
+  - Image processing
+  - RGB
 ---
 
 #### RGB Basics
