@@ -9,6 +9,7 @@ tags:
   - Optimization
 ---
 
+<!-- more -->
 ### Brent’s method on a quadratic function
 
 ```python
