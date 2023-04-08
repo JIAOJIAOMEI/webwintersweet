@@ -8,10 +8,6 @@ tags:
   - Gradient
   - Optimization
 ---
-  
-```js file or summary
-/* some code */
-```
 
 ### Brent’s method on a quadratic function
 
