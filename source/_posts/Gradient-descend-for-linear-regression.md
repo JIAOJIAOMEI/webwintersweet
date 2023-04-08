@@ -2,7 +2,7 @@
 mathjax: true
 title: Gradient descend for linear regression
 date: 2023-03-28 20:09:58
-top: 100
+top: 1000
 tags:
   - Gradient descend
   - Linear regression

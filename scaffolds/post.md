@@ -1,7 +1,6 @@
 ---
 title: {{ title }}
 date: {{ date }}
-updateDate: {{ date }}
 categories: 
 tags:
 description:
