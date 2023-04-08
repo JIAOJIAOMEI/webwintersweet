@@ -1,9 +1,11 @@
 ---
 title: {{ title }}
 date: {{ date }}
+updateDate: {{ date }}
 categories: 
 tags:
-comments: true
 description:
+top: 1
 hidden: false
+comments: true
 ---
