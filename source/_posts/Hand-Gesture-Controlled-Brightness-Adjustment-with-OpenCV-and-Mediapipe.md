@@ -13,8 +13,6 @@ tags:
 
 This code implements a hand gesture-controlled brightness adjustment using OpenCV and Mediapipe libraries. The program uses the camera feed to detect the landmarks of the user's hands and track the movement of the index finger tips.
 
-<!--more-->
-
 The program first initializes the hand detector using the Mediapipe library and opens the camera. It then sets the resolution of the camera and enters a while loop to continuously read the camera feed.
 
 The program detects the landmarks of the user's hands and tracks the movement of the index finger tips. It draws circles on the index finger tips and a line between the index finger tips of the two hands. It calculates the distance between the two index finger tips and adjusts the brightness of the camera feed based on the distance. 
