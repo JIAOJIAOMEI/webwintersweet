@@ -7,7 +7,7 @@ categories: Reinforcement learning
 tags: 
   - Artificial intelligence
   - Python
-description:
+description: This is a set of notes on reinforcement learning, which is a type of machine learning that involves an agent learning from its interactions with an environment to maximize a reward signal. The notes cover the basic concepts of reinforcement learning, such as the policy, reward signal, value function, and model of the environment, as well as the k-armed bandit problem, which is a simple example of a reinforcement learning problem. The notes include code examples in Python to demonstrate the implementation of the k-armed bandit problem with an epsilon-greedy policy.
 top:
 ---
 
