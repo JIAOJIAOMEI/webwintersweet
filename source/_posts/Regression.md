@@ -35,7 +35,7 @@ rank = np.linalg.matrix_rank(A)
 print("Rank of the matrix: ", rank)
 ```
 
-```
+```markdown
 Rank of the matrix:  3
 ```
 
