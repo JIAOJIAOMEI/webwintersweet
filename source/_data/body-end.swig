@@ -10,7 +10,7 @@ window.onload = function() {
     // 获取 div.table-container 内的 span 元素数量
     const spanCount = tableContainer.querySelectorAll("tbody > tr > td.code > pre > span").length;
 
-    // 检查 span 元素数量是否 >= 5
+    // 检查 span 元素数量是否 >= 1
     if (spanCount >= 5) {
       // 创建一个 <span> 标签并添加功能
       const spanElement = document.createElement("span");
