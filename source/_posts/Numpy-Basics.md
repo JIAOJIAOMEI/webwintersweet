@@ -50,7 +50,7 @@ f = np.array([[1, 2], [3, 4]])              # Create 2D array from a list of lis
 g = np.empty((2, 2))                        # Create uninitialized 2D array
 ```
 
-```
+```markdown
 # a
 [[1 2 3]
  [4 5 6]]
@@ -99,7 +99,7 @@ print("Bytes per element: ", a.itemsize)
 print("Total number of bytes used by the array: ", a.nbytes)
 ```
 
-```
+```markdown
 Size of the array:  6
 Shape of the array:  (2, 3)
 Number of dimensions:  2
@@ -127,7 +127,7 @@ squares_set = {x**2 for x in range(1, 11)}
 print("Set of squares: ", squares_set)
 ```
 
-```python
+```markdown
 List of squares:  [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 Dictionary of squares:  {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
 Set of squares:  {64, 1, 4, 36, 100, 9, 16, 49, 81, 25}
@@ -151,7 +151,7 @@ print("Array equal to 6: ", a == 6)               # Comparison
 print("Array plus 100: ", a + 100)               # Addition
 ```
 
-```
+```markdown
 Array to the power of 2:  [[ 1  4  9]
  [16 25 36]]
 Array divided by 2:  [[0.5 1.  1.5]
@@ -189,7 +189,7 @@ print("Every second element: ", a[::2])           # Slicing with a step of 2
 print("Reversed array: ", a[::-1])                # Slicing with a negative step
 ```
 
-```
+```markdown
 Element at index 0:  1
 Element at index -1:  5
 Element at index 2:  3
@@ -223,7 +223,7 @@ print("Last two columns: ")
 print(a[:, -2:])                                       # Slicing the last two columns
 ```
 
-```
+```markdown
 Element at row 0, column 1:  2
 Element at row -1, column -2:  8
 First row:  [1 2 3]
@@ -265,7 +265,7 @@ print("Last row of the last matrix: ")
 print(a[-1, -1, :])                                     # Slicing the last row of the last matrix
 ```
 
-```
+```markdown
 Element at position 1, 0, 1:  6
 Last element in the last row of the last matrix:  8
 First matrix: 
@@ -338,7 +338,7 @@ print("Depth-wise split arrays: ")
 print(k)
 ```
 
-```
+```markdown
 Vertically stacked array: 
 [[ 1  2  3]
  [ 4  5  6]

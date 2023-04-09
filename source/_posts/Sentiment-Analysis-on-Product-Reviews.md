@@ -141,7 +141,7 @@ for i, (title, score) in enumerate(sorted_scores):
     print(f'{i + 1}. {title}: {score:.4f}')
 ```
 
-```
+```markdown
 .../Desktop/Sentiment Analysis on Product Reviews/Sentiment Analysis on Product Reviews.py 
 Building prefix dict from the default dictionary ...
 Loading model from cache /var/folders/vb/bhfltf7s0n5dmrcb5r9s80mw0000gn/T/jieba.cache

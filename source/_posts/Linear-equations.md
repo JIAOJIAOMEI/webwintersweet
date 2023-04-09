@@ -86,7 +86,7 @@ print('x =', x[0])
 print('y =', x[1])
 ```
 
-```
+```markdown
 x = 3.0
 y = 1.0
 ```

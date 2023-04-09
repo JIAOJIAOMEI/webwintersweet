@@ -172,7 +172,7 @@ print(boston.feature_names)
 print(boston.target)
 ```
 
-```
+```markdown
 Number of Instances: 506 
 Number of Attributes: 13 numeric/categorical predictive. Median Value (attribute 14) is usually the target.
 Attribute Information (in order):
@@ -194,7 +194,7 @@ Attribute Information (in order):
 
 For example, for the first row, it means given the first row of data, the MEDV is 24. we have 506 rows.
 
-```
+```markdown
       CRIM    ZN  INDUS  CHAS    NOX  ...    TAX  PTRATIO       B  LSTAT  MEDV
 0  0.00632  18.0   2.31   0.0  0.538  ...  296.0     15.3  396.90   4.98  24.0
 1  0.02731   0.0   7.07   0.0  0.469  ...  242.0     17.8  396.90   9.14  21.6
@@ -243,7 +243,7 @@ The heatmap provides a visual representation of the strength and direction of th
 
 ### Linear system
 
-```
+```markdown
       CRIM    ZN  INDUS  CHAS    NOX  ...    TAX  PTRATIO       B  LSTAT  MEDV
 0  0.00632  18.0   2.31   0.0  0.538  ...  296.0     15.3  396.90   4.98  24.0
 1  0.02731   0.0   7.07   0.0  0.469  ...  242.0     17.8  396.90   9.14  21.6
@@ -305,7 +305,7 @@ theta = np.linalg.inv(X.T.dot(X)).dot(X.T).dot(y)
 print('theta: ', theta)
 ```
 
-```
+```markdown
 theta:  [ 3.64594884e+01 -1.08011358e-01  4.64204584e-02  2.05586264e-02
   2.68673382e+00 -1.77666112e+01  3.80986521e+00  6.92224640e-04
  -1.47556685e+00  3.06049479e-01 -1.23345939e-02 -9.52747232e-01

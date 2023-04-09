@@ -69,7 +69,7 @@ plt.savefig('norm.png', dpi=300, bbox_inches='tight', pad_inches=1)
 plt.show()
 ```
 
-```python
+```markdown
 Absolute distance: 4
 Euclidean distance: 2.8284271247461903
 ```
@@ -108,7 +108,7 @@ f_norm = np.linalg.norm(A, 'fro')
 print("Frobenius norm:", f_norm)
 ```
 
-```css
+```markdown
 Frobenius norm: 9.539392014169456
 ```
 
@@ -140,7 +140,7 @@ s_norm = s[0]
 print("Spectral norm:", s_norm)
 ```
 
-```python
+```markdown
 Spectral norm: 9.525518091565107
 ```
 

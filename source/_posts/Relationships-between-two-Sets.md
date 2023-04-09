@@ -109,7 +109,7 @@ plt.show()
 
 
 
-```
+```markdown
 |A| = 5
 |B| = 5
 |A ∩ B| = 2
