@@ -99,6 +99,6 @@ cv2.destroyAllWindows()
 
 A video demonstration of the final program can be found at the following link: https://drive.google.com/file/d/1WAxcclJO9HlfqIIzZvn3XCFV8l6c7-xB/view?usp=sharing
 
-### Reference
+# Reference
 
 1. *Virtual Calculator Based On OpenCV And Cvzone Using Python With A Full Source Code*. (2021, December 13). YouTube. https://www.youtube.com/watch?v=vOaurBYMovQ
