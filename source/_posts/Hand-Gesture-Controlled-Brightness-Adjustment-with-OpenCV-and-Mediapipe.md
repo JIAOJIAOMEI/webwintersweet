@@ -13,6 +13,7 @@ tags:
   - Image processing
   - Real-time tracking
 ---
+# Description
 
 This code implements a hand gesture-controlled brightness adjustment using OpenCV and Mediapipe libraries. The program uses the camera feed to detect the landmarks of the user's hands and track the movement of the index finger tips.
 
@@ -33,6 +34,7 @@ The steps involved in the program are:
 7. Display the camera feed with the brightness value and the distance between the index finger tips of both hands.
 8. Stop the program if the 'q' key is pressed, release the camera, and close all windows.
 
+# Implementation
 ```python
 # Name: Mei Jiaojiao
 # Profession: Artificial Intelligence
@@ -133,6 +135,6 @@ cv2.destroyAllWindows()
 
 The full video can be accessed at https://drive.google.com/file/d/1jz8ETwaZC0zIfCRmNHkV5fICosQPOWay/view?usp=sharing. Please have fun!😄
 
-### Reference
+# Reference
 
 1. YouTube. (2021, March 30). *Gesture volume control | OPENCV python | computer vision*. YouTube. Retrieved April 2, 2023, from https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q 

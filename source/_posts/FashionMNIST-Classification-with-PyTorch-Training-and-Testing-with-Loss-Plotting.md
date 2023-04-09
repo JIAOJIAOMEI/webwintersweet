@@ -11,9 +11,12 @@ tags:
   - Pytorch
   - Classification
 ---
+  
+# Description
 
 This code trains a neural network model to classify images from the FashionMNIST dataset using PyTorch. The model is trained using stochastic gradient descent (SGD) with cross-entropy loss as the loss function. The code loads the training and test datasets, creates data loaders for batching the data, and defines a neural network model using PyTorch's nn.Module class. The code then trains the model for a specified number of epochs, and records the training and test losses at each epoch. The final model is saved to a file, and example predictions are made on a 3x3 grid of test images, with the actual and predicted labels displayed for each image. The code also generates plots of the training and test loss over time, as well as the example predictions.
 
+# Implementation
 ```python
 # Name: Mei Jiaojiao
 # Profession: Artificial Intelligence
@@ -181,7 +184,7 @@ plt.show()
 
 The final test accuracy of the model is 73.4% and the average loss is 0.739739.
 
-### Reference
+# Reference
 
 1. Z. (2022, March 21). *GitHub - zalandoresearch/fashion-mnist: A MNIST-like fashion product database. Benchmark*. GitHub. https://github.com/zalandoresearch/fashion-mnist
 

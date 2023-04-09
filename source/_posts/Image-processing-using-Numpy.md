@@ -11,7 +11,7 @@ tags:
   - Image processing
 ---
 
-### Change the oder of RGB
+# Change the oder of RGB
 
 ```python
 # Name: Mei Jiaojiao
@@ -56,7 +56,7 @@ plt.show()            # Show the figure with all the subplots
 
 ![rose_chanel_order](Image-processing-using-Numpy/rose_chanel_order.png)
 
-### Single channel 
+# Single channel 
 
 ```python
 # Name: Mei Jiaojiao

@@ -12,7 +12,7 @@ tags:
   - Matplotlib 
 ---
 
-### Line and curves
+# Line and curves
 
 ```python
 # Name: Mei Jiaojiao
@@ -65,7 +65,7 @@ plt.show()
 
 ![2d_functions](Functions-Plot/2d_functions.png)
 
-### 3D view of 2D functions
+# 3D view of 2D functions
 
 $F_1(x) = -\sum\limits_{i=1}^n x_i \sin(\sqrt{|x_i|})$
 

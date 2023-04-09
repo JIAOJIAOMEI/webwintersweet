@@ -12,7 +12,7 @@ categories: Basic math
 comments: true
 ---
 
-### Uniform distribution
+# Uniform distribution
 
 The probability density function (pdf) of the continuous uniform distribution is:
 $$
@@ -52,7 +52,7 @@ plt.show()
 
 ![uniform](Variables/uniform.png)
 
-### Normal distribution
+# Normal distribution
 
 The probability density function (PDF) of a normal distribution with mean $\mu$ and standard deviation $\sigma$ is given by:
 $$
@@ -103,7 +103,7 @@ fig.savefig('normal.png', dpi=600, bbox_inches='tight')
 
 ![normal](Variables/normal.png)
 
-### Bivariate
+# Bivariate
 
 The bivariate normal distribution is a probability distribution for two random variables that have a normal distribution.
 
@@ -152,7 +152,7 @@ plt.show()
 
 ![bivariate_normal](Variables/bivariate_normal.png)
 
-### Reference
+# Reference
 
 1. Wikipedia contributors. (2023, March 23). Normal distribution. In Wikipedia. Retrieved March 28, 2023, from https://en.wikipedia.org/wiki/Normal_distribution
 2. Pennsylvania State University. (n.d.). 4.2 - Bivariate normal distribution. In STAT 505: Applied multivariate statistical analysis. Retrieved March 28, 2023, from https://online.stat.psu.edu/stat505/lesson/4/4.2

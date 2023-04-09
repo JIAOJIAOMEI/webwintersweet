@@ -12,7 +12,7 @@ tags:
   - Image processing
   - Detection
 ---
-
+# Description
 This program uses OpenCV and the Hand Tracking Module to detect and count the number of fingers visible in a camera feed. It can detect up to two hands simultaneously and displays the number of fingers for each hand as well as the total number of fingers on the screen.
 
 Steps:
@@ -25,6 +25,7 @@ Steps:
 6. The finger counts are displayed on the screen using OpenCV's putText function.
 7. The loop stops when the user presses the 'q' key, and the camera is released and all windows are closed.
 
+# Implementation
 ```python
 import cv2
 from cvzone.HandTrackingModule import HandDetector

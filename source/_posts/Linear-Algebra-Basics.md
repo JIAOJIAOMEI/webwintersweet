@@ -10,9 +10,10 @@ tags:
   - Matrix
   - Python
 ---
-
+# Scalars
 Scalars: A scalar is a quantity that has only magnitude and no direction. It is a single value that can be represented by a number. 
 
+# Vectors
 Vectors: A vector is a mathematical object that has both magnitude and direction. It can be represented by an ordered list of numbers, or coordinates, that describe the vector's components in a particular coordinate system.
 $$
 \begin{equation}
@@ -25,6 +26,8 @@ v_2
 \end{aligned}
 \end{equation}
 $$
+
+# 2D vector
 ```python
 # Name: Mei Jiaojiao
 # Profession: Artificial Intelligence
@@ -65,6 +68,7 @@ The formula to calculate the length of a $2 D$ vector with components $(x, y)$ i
 $$
 |\boldsymbol{v}|=\sqrt{x^2+y^2}
 $$
+# Matrices
 Matrices: A matrix is a rectangular array of numbers, arranged in rows and columns. It can be used to represent data, systems of linear equations, and transformations in linear algebra.
 $$
 
@@ -76,8 +80,11 @@ A=\left[\begin{array}{ll}
 \end{array}\right] \text { is a } 3 \text { by } 2 \text { matrix : } m=3 \text { rows and } n=2 \text { columns. }
 \end{equation}
 $$
+
+# Tensors
 Tensors: A tensor is a generalization of vectors and matrices, and is used to represent higher-order data or multidimensional arrays. Tensors can have any number of dimensions, and can be used to represent complex systems, such as those found in physics, engineering, and machine learning.
 
+# Python examples
 ```python
 # Name: Mei Jiaojiao
 # Profession: Artificial Intelligence

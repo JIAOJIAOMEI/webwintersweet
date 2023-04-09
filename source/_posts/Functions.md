@@ -13,7 +13,7 @@ tags:
   - Basics
 ---
 
-### One to one functions
+# One to one functions
 
 ```python
 # Name: Mei Jiaojiao
@@ -64,7 +64,7 @@ plt.show()
     <img src="Functions/One-to-one%20Function.png" alt="One-to-one Function" style="zoom:33%;" />
 </div>
 
-### Increasing and decreasing
+# Increasing and decreasing
 
 ```python
 # Name: Mei Jiaojiao
@@ -127,7 +127,7 @@ plt.show()
 
 <div style="text-align:center">   <img src="Functions/Function%20f(x)%20=%20x%5E2.png" alt="Function f(x) = x^2" style="zoom:33%;" /></div>
 
-### Old and Even functions
+# Old and Even functions
 
 ```python
 # Name: Mei Jiaojiao
@@ -176,7 +176,7 @@ plt.show()
 
 <div style="text-align:center">  <img src="Functions/Even%20and%20old%20Function.png" alt="Even and old Function" style="zoom:30%;" /> </div>
 
-### Convex and concave
+# Convex and concave
 
 ```python
 # Name: Mei Jiaojiao
@@ -251,7 +251,7 @@ plt.show()
 
 <div style="text-align:center">  <img src="Functions/convexity.png" alt="convexity" style="zoom:67%;" /> </div>
 
-### Exponential and logarithmic
+# Exponential and logarithmic
 
 ```python
 # Name: Mei Jiaojiao
@@ -303,7 +303,7 @@ plt.show()
 
 <div style="text-align:center"> <img src="Functions/exponential_logarithmic.png" alt="exponential_logarithmic" style="zoom:50%;" /> </div>
 
-### Floor function and ceiling function
+# Floor function and ceiling function
 
 ```python
 # Name: Mei Jiaojiao
@@ -356,7 +356,7 @@ plt.show()
 
 <div style="text-align:center"><img src="Functions/floor_ceiling.png" alt="floor_ceiling" style="zoom:67%;" /></div>
 
-### Reference
+# Reference
 
 1. Blitzstein, J. K., & Hwang, J. (2019). Introduction to Probability (2nd ed.). CRC Press.
 

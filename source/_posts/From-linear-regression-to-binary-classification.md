@@ -14,7 +14,7 @@ tags:
   - Sigmoid
 ---
 
-### Regression and classification 
+# Regression and classification 
 
 Linear regression involves finding a line that fits a set of data points, while binary classification involves finding a line that separates a set of points into two groups. Specifically, some points will be on one side of the line and others on the other side.
 
@@ -65,7 +65,7 @@ plt.show()
 
 Now, building on the concept of linear regression, we can view the data points above the regression line as one class, and the points below the line as another class. This transforms the regression problem into a binary classification problem, where the goal is to find a line that best separates the two classes.
 
-### The relationship between a point and a line
+# The relationship between a point and a line
 
 Given a line with equation $Ax + By + C = 0$ and a point with coordinates $(x_0, y_0)$, we can determine the relationship between the point and the line using the vector inner product.
 
@@ -116,7 +116,7 @@ plt.show()
 
 we need sigmoid function to solve this problem.
 
-### Sigmoid
+# Sigmoid
 
 ```python
 # Name: Mei Jiaojiao
@@ -184,7 +184,7 @@ $$
 \end{equation}
 $$
 
-### Mapping though sigmoid
+# Mapping though sigmoid
 
 ```python
 import matplotlib.pyplot as plt
@@ -229,13 +229,13 @@ plt.show()
 
 **Previously, the points were separated into two classes on either side of a straight line. Now, the results are passed through a sigmoid function to map the values to the range of 0-1. This way, the distance from the points to the line can be more easily observed.**
 
-### Decision boundary
+# Decision boundary
 
 Generally, the decision boundary is set at 0.5, since the points on the decision boundary will be mapped to 0.5 after passing through the sigmoid function. Therefore, any point with a sigmoid value above 0.5 is classified as one class, while any point with a sigmoid value below 0.5 is classified as the other class.
 
 However, in certain cases, it may be more appropriate to set the decision boundary at a different value. For example, in the case of spam email classification, a decision boundary of 0.8 or 0.9 may be more appropriate to reduce the number of false positives and ensure that fewer emails are mistakenly identified as spam. Ultimately, the choice of decision boundary depends on the specific application and the trade-offs between different types of classification errors.
 
-### Reference 
+# Reference 
 
 1. Wright, R. E. (1995). Logistic regression.
 2. King, J. E. (2008). Binary logistic regression. *Best practices in quantitative methods*, 358-384.

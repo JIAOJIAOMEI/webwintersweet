@@ -23,7 +23,7 @@ a_1 x_1+a_2 x_2+\cdots+a_n x_n=b
 $$
 where $a_1, a_2, \ldots, a_n$ are constants, $x_1, x_2, \ldots, x_n$ are variables representing the coordinates of a point in n-dimensional space, and $b$ is a constant.
 
-### Binary classification problem
+# Binary classification problem
 
 The task of binary classification is to classify input data points into one of two classes or categories. This is a supervised learning task where the machine learning algorithm is trained on a labeled dataset where each data point is labeled as belonging to one of the two classes.
 

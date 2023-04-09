@@ -139,57 +139,58 @@ sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)
 print('Ranking of the classifiers based on accuracy score:')
 for i, (title, score) in enumerate(sorted_scores):
     print(f'{i + 1}. {title}: {score:.4f}')
-```
+    
+    
+    
 
-```markdown
-.../Desktop/Sentiment Analysis on Product Reviews/Sentiment Analysis on Product Reviews.py 
-Building prefix dict from the default dictionary ...
-Loading model from cache /var/folders/vb/bhfltf7s0n5dmrcb5r9s80mw0000gn/T/jieba.cache
-Loading model cost 0.439 seconds.
-Prefix dict has been built successfully.
-The accuracy score of the MLP classifier model is: 0.9814814814814815
-The selected comment is: 很 好 ， 有 免息 分期 。 特意 去 旗舰店 看后 下单 的 。 红色 很 好看 。 不错 不错 。 一 第一次 用 苹果 。 再 体验 几天 来 评价 。
-The predicted sentiment of the selected comment using MLP classifier model is: 1
-The actual sentiment of the selected comment is: 1
-The accuracy score of the Naive Bayes classifier model is: 0.8888888888888888
-The selected comment is: 外形 外观 ： 手感 非常 舒服   看着 大气 上档次 。 屏幕 音效 ： 屏幕 分辨率 和 色彩 效果 非常 好 。 拍照 效果 ： 拍照 一如既往 的 真实   很 清晰 。 待机时间 ： 电池 很 抗用   续航 时间 长 。 其他 特色 ： 发货 快   态度 好 价格 美丽 。 运行 速度 ： 系统 运行 速度 超级 快
-The predicted sentiment of the selected comment using Naive Bayes classifier model is: 1
-The actual sentiment of the selected comment is: 1
-The accuracy score of the SVM is: 0.9814814814814815
-The selected comment is: 全新 国行   性价比 高   和 6s   7 比较 质 的 飞跃 ～ 不像 网上 评测 的 那么 不堪 ， 屏幕 不错 、 电池 耐用 ！ 跑 分 也 很 高 ！ 玩 吃 鸡 很 流畅 ！ 目前 的 真香机 ！
-The predicted sentiment of the selected comment using SVM is: 1
-The actual sentiment of the selected comment is: 1
-The accuracy score of the Random Forest is: 0.9722222222222222
-The selected comment is: 运行 速度 很快 ， 颜值 也 很 好 ， 网上 说 的 黑边 ， 完全 不 影响 它 的 美丽 ， 从 6 升级 上来 ， 也 没 觉得 屏幕显示 不 轻易 ， 总体 使用 下来 很 满意 ， 主要 是 爱 它 的 颜值 ， 珊瑚 色 很 美 ～
-The predicted sentiment of the selected comment using Random Forest is: 1
-The actual sentiment of the selected comment is: 1
-The accuracy score of the Logistic Regression is: 0.9814814814814815
-The selected comment is: 宝贝 用 起来 很 流畅 ， 珊瑚 色 很漂亮 ， 拿出 去 都 说 好看 ， 而且 64G 的 内存 很 够用 ， 适合 女孩 用 。 相信 京东 的 质量 ！ ！ ！
-The predicted sentiment of the selected comment using Logistic Regression is: 1
-The actual sentiment of the selected comment is: 1
-The accuracy score of the K-Nearest Neighbors is: 0.4537037037037037
-The selected comment is: 价格 保护 没有 用 ， 说 618 保价 的 没用
-The predicted sentiment of the selected comment using K-Nearest Neighbors is: 0
-The actual sentiment of the selected comment is: 0
-The accuracy score of the Decision Tree is: 0.9259259259259259
-The selected comment is: 破 手机
-The predicted sentiment of the selected comment using Decision Tree is: 0
-The actual sentiment of the selected comment is: 0
-The accuracy score of the AdaBoost is: 0.9074074074074074
-The selected comment is: 非常 好 ， 为 强大 的 系统 点赞 ， 用 了 苹果 就 真的 不想 用安卓 系统 ， 一点 都 卡 ， 不拖屏 ， 手感 一级 棒 ， 在 一个 就是 它 的 电池 ， 这次 真是 飞跃 ，
-The predicted sentiment of the selected comment using AdaBoost is: 1
-The actual sentiment of the selected comment is: 1
-Ranking of the classifiers based on accuracy score:
-1. MLP classifier model: 0.9815
-2. SVM: 0.9815
-3. Logistic Regression: 0.9815
-4. Random Forest: 0.9722
-5. Decision Tree: 0.9259
-6. AdaBoost: 0.9074
-7. Naive Bayes classifier model: 0.8889
-8. K-Nearest Neighbors: 0.4537
-
-Process finished with exit code 0
+# .../Desktop/Sentiment Analysis on Product Reviews/Sentiment Analysis on Product Reviews.py 
+# Building prefix dict from the default dictionary ...
+# Loading model from cache /var/folders/vb/bhfltf7s0n5dmrcb5r9s80mw0000gn/T/jieba.cache
+# Loading model cost 0.439 seconds.
+# Prefix dict has been built successfully.
+# The accuracy score of the MLP classifier model is: 0.9814814814814815
+# The selected comment is: 很 好 ， 有 免息 分期 。 特意 去 旗舰店 看后 下单 的 。 红色 很 好看 。 不错 不错 。 一 第一次 用 苹果 。 再 体验 几天 来 评价 。
+# The predicted sentiment of the selected comment using MLP classifier model is: 1
+# The actual sentiment of the selected comment is: 1
+# The accuracy score of the Naive Bayes classifier model is: 0.8888888888888888
+# The selected comment is: 外形 外观 ： 手感 非常 舒服   看着 大气 上档次 。 屏幕 音效 ： 屏幕 分辨率 和 色彩 效果 非常 好 。 拍照 效果 ： 拍照 一如既往 的 真实   很 清晰 。 待机时间 ： 电池 很 抗用   续航 时间 长 。 其他 特色 ： 发货 快   态度 好 价格 美丽 。 运行 速度 ： 系统 运行 速度 超级 快
+# The predicted sentiment of the selected comment using Naive Bayes classifier model is: 1
+# The actual sentiment of the selected comment is: 1
+# The accuracy score of the SVM is: 0.9814814814814815
+# The selected comment is: 全新 国行   性价比 高   和 6s   7 比较 质 的 飞跃 ～ 不像 网上 评测 的 那么 不堪 ， 屏幕 不错 、 电池 耐用 ！ 跑 分 也 很 高 ！ 玩 吃 鸡 很 流畅 ！ 目前 的 真香机 ！
+# The predicted sentiment of the selected comment using SVM is: 1
+# The actual sentiment of the selected comment is: 1
+# The accuracy score of the Random Forest is: 0.9722222222222222
+# The selected comment is: 运行 速度 很快 ， 颜值 也 很 好 ， 网上 说 的 黑边 ， 完全 不 影响 它 的 美丽 ， 从 6 升级 上来 ， 也 没 觉得 屏幕显示 不 轻易 ， 总体 使用 下来 很 满意 ， 主要 是 爱 它 的 颜值 ， 珊瑚 色 很 美 ～
+# The predicted sentiment of the selected comment using Random Forest is: 1
+# The actual sentiment of the selected comment is: 1
+# The accuracy score of the Logistic Regression is: 0.9814814814814815
+# The selected comment is: 宝贝 用 起来 很 流畅 ， 珊瑚 色 很漂亮 ， 拿出 去 都 说 好看 ， 而且 64G 的 内存 很 够用 ， 适合 女孩 用 。 相信 京东 的 质量 ！ ！ ！
+# The predicted sentiment of the selected comment using Logistic Regression is: 1
+# The actual sentiment of the selected comment is: 1
+# The accuracy score of the K-Nearest Neighbors is: 0.4537037037037037
+# The selected comment is: 价格 保护 没有 用 ， 说 618 保价 的 没用
+# The predicted sentiment of the selected comment using K-Nearest Neighbors is: 0
+# The actual sentiment of the selected comment is: 0
+# The accuracy score of the Decision Tree is: 0.9259259259259259
+# The selected comment is: 破 手机
+# The predicted sentiment of the selected comment using Decision Tree is: 0
+# The actual sentiment of the selected comment is: 0
+# The accuracy score of the AdaBoost is: 0.9074074074074074
+# The selected comment is: 非常 好 ， 为 强大 的 系统 点赞 ， 用 了 苹果 就 真的 不想 用安卓 系统 ， 一点 都 卡 ， 不拖屏 ， 手感 一级 棒 ， 在 一个 就是 它 的 电池 ， 这次 真是 飞跃 ，
+# The predicted sentiment of the selected comment using AdaBoost is: 1
+# The actual sentiment of the selected comment is: 1
+# Ranking of the classifiers based on accuracy score:
+# 1. MLP classifier model: 0.9815
+# 2. SVM: 0.9815
+# 3. Logistic Regression: 0.9815
+# 4. Random Forest: 0.9722
+# 5. Decision Tree: 0.9259
+# 6. AdaBoost: 0.9074
+# 7. Naive Bayes classifier model: 0.8889
+# 8. K-Nearest Neighbors: 0.4537
+# 
+# Process finished with exit code 0
 ```
 
 <div style="text-align:center">
@@ -211,7 +212,7 @@ A 2x2 confusion matrix is used to evaluate binary classification models that cla
 
 The confusion matrix allows us to evaluate the performance of a binary classification model by comparing the predicted class labels to the actual class labels. The TP, FP, FN, and TN values can be used to calculate various metrics such as accuracy, precision, recall, and F1-score.
 
-### Reference
+# Reference
 
 1. *3.4. Validation curves: plotting scores to evaluate models*. (n.d.). Scikit-learn. https://scikit-learn/stable/modules/learning_curve.html
 2. *sklearn.metrics.confusion_matrix*. (n.d.). Scikit-learn. https://scikit-learn/stable/modules/generated/sklearn.metrics.confusion_matrix.html

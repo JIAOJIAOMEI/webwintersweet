@@ -12,7 +12,7 @@ tags:
   - Scipy
 ---
 
-### Interpolation
+# Interpolation
 
 ```python
 # Name: Mei Jiaojiao
@@ -48,7 +48,7 @@ plt.show()
 
 ![Interpolation](Differential-equations/Interpolation.png)
 
-### Optimization
+# Optimization
 
 ```python
 # Name: Mei Jiaojiao
@@ -141,7 +141,7 @@ plt.show()
 
 ![Optimization with constraints](Differential-equations/Optimization%20with%20constraints.png)
 
-### Local minima and global minima
+# Local minima and global minima
 
 ```python
 # Name: Mei Jiaojiao
@@ -186,7 +186,7 @@ plt.show()
 
 ![Local Minima](Differential-equations/Local%20Minima.png)
 
-### Smooth and non-smooth
+# Smooth and non-smooth
 
 ```python
 # Name: Mei Jiaojiao
@@ -224,7 +224,7 @@ plt.show()
 
 ![smooth_non_smooth](Differential-equations/smooth_non_smooth.png)
 
-### Noisy versus exact cost functions
+# Noisy versus exact cost functions
 
 ```python
 # Name: Mei Jiaojiao
@@ -259,7 +259,7 @@ plt.show()
 
 ![Exact_vs_Noisy_Cost_Functions](Differential-equations/Exact_vs_Noisy_Cost_Functions.png)
 
-### Constraints
+# Constraints
 
 ```python
 # Name: Mei Jiaojiao
@@ -320,7 +320,7 @@ plt.show()
 
 ![Constrained_vs_Unconstrained_Optimization](Differential-equations/Constrained_vs_Unconstrained_Optimization.png)
 
-### Reference
+# Reference
 
 1. *Scipy Lecture Notes — Scipy lecture notes*. (n.d.). Scipy Lecture Notes — Scipy Lecture Notes. https://scipy-lectures.org/index.html#one-document-to-learn-numerics-science-and-data-with-python
 

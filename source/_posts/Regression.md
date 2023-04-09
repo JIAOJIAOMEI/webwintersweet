@@ -13,7 +13,7 @@ tags:
   - Rank
 ---
 
-### Rank
+# Rank
 
 In linear algebra, the rank of a matrix is the number of linearly independent rows or columns in the matrix.
 
@@ -33,11 +33,10 @@ rank = np.linalg.matrix_rank(A)
 
 # Print the rank of the matrix
 print("Rank of the matrix: ", rank)
+
+# Rank of the matrix:  3
 ```
 
-```markdown
-Rank of the matrix:  3
-```
 
 To find the rank, we need to :
 $$
@@ -142,11 +141,11 @@ so the rank is 2.
 
 **Geometrically, this means that the rows or columns of the matrix lie in a plane in three-dimensional space.**
 
-### Easy to remember Rank
+# Easy to remember Rank
 
 In simpler terms, imagine that you're going out and you bring three items with you: an umbrella, a raincoat, and a loaf of bread. However, the umbrella and raincoat serve the same purpose of keeping you dry in the rain, so one of them is unnecessary. Therefore, you are effectively only bringing two items with you. This is similar to a 3 x 3 matrix with a rank of 2, where one row or column is redundant and can be expressed as a linear combination of the other two.
 
-### Span
+# Span
 
 In linear algebra, the span of a set of vectors $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n$ is the set of all possible linear combinations of those vectors. Formally, the span is defined as follows:
 $$
@@ -158,7 +157,7 @@ In words, the span is the set of all possible vectors that can be formed by scal
 
 Geometrically, the span of a set of vectors is the smallest subspace that contains all those vectors. For example, the span of two non-collinear vectors in $\mathbb{R}^2$ is the entire plane, while the span of two parallel vectors is the line they lie on.
 
-### Features
+# Features
 
 The Boston dataset contains information on various housing features in 506 neighborhoods around Boston, which can be used to evaluate the price of a house (target) based on different attributes. The dataset includes 13 attributes, and median value of owner-occupied homes in thousands of dollars, is provided in attribute 14.
 
@@ -170,37 +169,37 @@ print(boston.DESCR)
 print(boston.data.shape)
 print(boston.feature_names)
 print(boston.target)
+
+# Number of Instances: 506 
+# Number of Attributes: 13 numeric/categorical predictive. Median Value (attribute 14) is usually the target.
+# Attribute Information (in order):
+#         - CRIM     per capita crime rate by town
+#         - ZN       proportion of residential land zoned for lots over 25,000 sq.ft.
+#         - INDUS    proportion of non-retail business acres per town
+#         - CHAS     Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
+#         - NOX      nitric oxides concentration (parts per 10 million)
+#         - RM       average number of rooms per dwelling
+#         - AGE      proportion of owner-occupied units built prior to 1940
+#         - DIS      weighted distances to five Boston employment centres
+#         - RAD      index of accessibility to radial highways
+#         - TAX      full-value property-tax rate per $10,000
+#         - PTRATIO  pupil-teacher ratio by town
+#         - B        1000(Bk - 0.63)^2 where Bk is the proportion of black people by town
+#         - LSTAT    % lower status of the population
+#         - MEDV     Median value of owner-occupied homes in $1000's
 ```
 
-```markdown
-Number of Instances: 506 
-Number of Attributes: 13 numeric/categorical predictive. Median Value (attribute 14) is usually the target.
-Attribute Information (in order):
-        - CRIM     per capita crime rate by town
-        - ZN       proportion of residential land zoned for lots over 25,000 sq.ft.
-        - INDUS    proportion of non-retail business acres per town
-        - CHAS     Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
-        - NOX      nitric oxides concentration (parts per 10 million)
-        - RM       average number of rooms per dwelling
-        - AGE      proportion of owner-occupied units built prior to 1940
-        - DIS      weighted distances to five Boston employment centres
-        - RAD      index of accessibility to radial highways
-        - TAX      full-value property-tax rate per $10,000
-        - PTRATIO  pupil-teacher ratio by town
-        - B        1000(Bk - 0.63)^2 where Bk is the proportion of black people by town
-        - LSTAT    % lower status of the population
-        - MEDV     Median value of owner-occupied homes in $1000's
-```
+
 
 For example, for the first row, it means given the first row of data, the MEDV is 24. we have 506 rows.
 
-```markdown
-      CRIM    ZN  INDUS  CHAS    NOX  ...    TAX  PTRATIO       B  LSTAT  MEDV
-0  0.00632  18.0   2.31   0.0  0.538  ...  296.0     15.3  396.90   4.98  24.0
-1  0.02731   0.0   7.07   0.0  0.469  ...  242.0     17.8  396.90   9.14  21.6
-2  0.02729   0.0   7.07   0.0  0.469  ...  242.0     17.8  392.83   4.03  34.7
-3  0.03237   0.0   2.18   0.0  0.458  ...  222.0     18.7  394.63   2.94  33.4
-4  0.06905   0.0   2.18   0.0  0.458  ...  222.0     18.7  396.90   5.33  36.2
+```python
+#       CRIM    ZN  INDUS  CHAS    NOX  ...    TAX  PTRATIO       B  LSTAT  MEDV
+# 0  0.00632  18.0   2.31   0.0  0.538  ...  296.0     15.3  396.90   4.98  24.0
+# 1  0.02731   0.0   7.07   0.0  0.469  ...  242.0     17.8  396.90   9.14  21.6
+# 2  0.02729   0.0   7.07   0.0  0.469  ...  242.0     17.8  392.83   4.03  34.7
+# 3  0.03237   0.0   2.18   0.0  0.458  ...  222.0     18.7  394.63   2.94  33.4
+# 4  0.06905   0.0   2.18   0.0  0.458  ...  222.0     18.7  396.90   5.33  36.2
 ```
 
 Given a matrix of size 506 x 13, the rank of the matrix must be less than or equal to 13, since the maximum rank of a 506 x 13 matrix is 13. 
@@ -209,7 +208,7 @@ Given a matrix of size 506 x 13, the rank of the matrix must be less than or equ
 
 In real-world engineering applications, the relationship between two features may not be completely independent or dependent, but may exist somewhere in between. These relationships can be measured using correlation coefficients or other statistical measures, such as mutual information or covariance.
 
-### Correlation coefficients
+# Correlation coefficients
 
 ```python
 # Name: Mei Jiaojiao
@@ -241,15 +240,15 @@ plt.show()
 
 The heatmap provides a visual representation of the strength and direction of the correlation between variables, ranging from -1 (perfect negative correlation) to 1 (perfect positive correlation), with 0 indicating no correlation.
 
-### Linear system
+# Linear system
 
-```markdown
-      CRIM    ZN  INDUS  CHAS    NOX  ...    TAX  PTRATIO       B  LSTAT  MEDV
-0  0.00632  18.0   2.31   0.0  0.538  ...  296.0     15.3  396.90   4.98  24.0
-1  0.02731   0.0   7.07   0.0  0.469  ...  242.0     17.8  396.90   9.14  21.6
-2  0.02729   0.0   7.07   0.0  0.469  ...  242.0     17.8  392.83   4.03  34.7
-3  0.03237   0.0   2.18   0.0  0.458  ...  222.0     18.7  394.63   2.94  33.4
-4  0.06905   0.0   2.18   0.0  0.458  ...  222.0     18.7  396.90   5.33  36.2
+```python
+#       CRIM    ZN  INDUS  CHAS    NOX  ...    TAX  PTRATIO       B  LSTAT  MEDV
+# 0  0.00632  18.0   2.31   0.0  0.538  ...  296.0     15.3  396.90   4.98  24.0
+# 1  0.02731   0.0   7.07   0.0  0.469  ...  242.0     17.8  396.90   9.14  21.6
+# 2  0.02729   0.0   7.07   0.0  0.469  ...  242.0     17.8  392.83   4.03  34.7
+# 3  0.03237   0.0   2.18   0.0  0.458  ...  222.0     18.7  394.63   2.94  33.4
+# 4  0.06905   0.0   2.18   0.0  0.458  ...  222.0     18.7  396.90   5.33  36.2
 ```
 
 let's recall this dataset. It just shows the first 5 rows, but actually we have 506 rows.
@@ -274,7 +273,7 @@ where $\mathbf{X}$ is the $506 \times 13$ matrix of input features, $\mathbf{\th
 
 The goal is to find $\mathbf{\theta}$.
 
-### Normal equation
+# Normal equation
 
 The solution for the model coefficients $\mathbf{\theta}$ using the normal equation is given by:
 $$
@@ -303,16 +302,15 @@ X = np.hstack((np.ones((X.shape[0], 1)), X))
 theta = np.linalg.inv(X.T.dot(X)).dot(X.T).dot(y)
 # print the result
 print('theta: ', theta)
+
+# theta:  [ 3.64594884e+01 -1.08011358e-01  4.64204584e-02  2.05586264e-02
+#   2.68673382e+00 -1.77666112e+01  3.80986521e+00  6.92224640e-04
+#  -1.47556685e+00  3.06049479e-01 -1.23345939e-02 -9.52747232e-01
+#   9.31168327e-03 -5.24758378e-01]
 ```
 
-```markdown
-theta:  [ 3.64594884e+01 -1.08011358e-01  4.64204584e-02  2.05586264e-02
-  2.68673382e+00 -1.77666112e+01  3.80986521e+00  6.92224640e-04
- -1.47556685e+00  3.06049479e-01 -1.23345939e-02 -9.52747232e-01
-  9.31168327e-03 -5.24758378e-01]
-```
 
-### Notation
+# Notation
 
 In a linear regression model, there is typically an error term $\mathbf{\epsilon}$ that represents the difference between the predicted target values and the true target values.
 
@@ -350,7 +348,7 @@ plt.show()
 
 The error term in a linear regression model accounts for the fact that the predicted values may not perfectly align with the actual values, due to the inherent variability in the data. In other words, the error term allows for some deviation between the predicted values and the true values.
 
-### Polynomial regression
+# Polynomial regression
 
 Polynomial regression and linear regression are similar in that they both aim to model the relationship between an input variable and a target variable. However, they differ in the functional form of the model that they use to capture this relationship.
 
@@ -392,7 +390,7 @@ plt.show()
   <img src="Regression/Polynomial Regression of Sin(x).png" alt="Polynomial Regression of Sin(x)" style="zoom:30%;" />
 </p>
 
-### Reference
+# Reference
 
 1. UCI Machine Learning Repository (2018). Housing Data Set [Data File]. Retrieved from https://archive.ics.uci.edu/ml/machine-learning-databases/housing/
 2. Strang, G. (2016). Introduction to linear algebra (5th ed.). Wellesley, MA: Wellesley-Cambridge Press.

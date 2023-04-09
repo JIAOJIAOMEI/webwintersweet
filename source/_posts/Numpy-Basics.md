@@ -11,7 +11,7 @@ tags:
   - Matrix
 ---
 
-### Create 1D array using Numpy
+# Create 1D array using Numpy
 
 ```python
 import numpy as np
@@ -35,7 +35,7 @@ h = np.empty(5)                     # Create 1D array without initializing its v
 # [0. 0. 0. 0. 0.]
 ```
 
-### Create 2D array using Numpy
+# Create 2D array using Numpy
 
 ```python
 import numpy as np
@@ -48,35 +48,34 @@ d = np.eye(3)                               # Create 2D identity matrix
 e = np.random.rand(2, 3)                    # Create 2D array with random values
 f = np.array([[1, 2], [3, 4]])              # Create 2D array from a list of lists
 g = np.empty((2, 2))                        # Create uninitialized 2D array
+
+# # a
+# [[1 2 3]
+#  [4 5 6]]
+#  # b
+# [[0. 0. 0.]
+#  [0. 0. 0.]
+#  [0. 0. 0.]]
+#  # c
+# [[1. 1.]
+#  [1. 1.]]
+#  # d
+# [[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
+#  # e
+# [[0.23691216 0.7258241  0.25003681]
+#  [0.52863985 0.92896228 0.81953756]]
+#  # f
+# [[1 2]
+#  [3 4]]
+#  # g
+# [[0. 0.]
+#  [0. 0.]]
 ```
 
-```markdown
-# a
-[[1 2 3]
- [4 5 6]]
- # b
-[[0. 0. 0.]
- [0. 0. 0.]
- [0. 0. 0.]]
- # c
-[[1. 1.]
- [1. 1.]]
- # d
-[[1. 0. 0.]
- [0. 1. 0.]
- [0. 0. 1.]]
- # e
-[[0.23691216 0.7258241  0.25003681]
- [0.52863985 0.92896228 0.81953756]]
- # f
-[[1 2]
- [3 4]]
- # g
-[[0. 0.]
- [0. 0.]]
-```
 
-### Checking attributes of a 2D array
+# Checking attributes of a 2D array
 
 ```python
 import numpy as np
@@ -97,18 +96,17 @@ print("Bytes per element: ", a.itemsize)
 
 # Check the total number of bytes used by the array
 print("Total number of bytes used by the array: ", a.nbytes)
+
+# Size of the array:  6
+# Shape of the array:  (2, 3)
+# Number of dimensions:  2
+# Data type of the array:  int64
+# Bytes per element:  8
+# Total number of bytes used by the array:  48
 ```
 
-```markdown
-Size of the array:  6
-Shape of the array:  (2, 3)
-Number of dimensions:  2
-Data type of the array:  int64
-Bytes per element:  8
-Total number of bytes used by the array:  48
-```
 
-### Comprehension
+# Comprehension
 
 ```python
 # List comprehension example
@@ -125,15 +123,16 @@ print("Dictionary of squares: ", squares_dict)
 # Create a set of squares of numbers from 1 to 10
 squares_set = {x**2 for x in range(1, 11)}
 print("Set of squares: ", squares_set)
+
+
+# List of squares:  [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+# Dictionary of squares:  {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
+# Set of squares:  {64, 1, 4, 36, 100, 9, 16, 49, 81, 25}
 ```
 
-```markdown
-List of squares:  [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-Dictionary of squares:  {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
-Set of squares:  {64, 1, 4, 36, 100, 9, 16, 49, 81, 25}
-```
 
-### Basic operations of a Matrix
+
+# Basic operations of a Matrix
 
 ```python
 import numpy as np
@@ -149,26 +148,26 @@ print("Array integer divided by 2: ", a // 2)     # Integer division
 print("Array greater than 5: ", a > 5)            # Comparison
 print("Array equal to 6: ", a == 6)               # Comparison
 print("Array plus 100: ", a + 100)               # Addition
+
+# Array to the power of 2:  [[ 1  4  9]
+#  [16 25 36]]
+# Array divided by 2:  [[0.5 1.  1.5]
+#  [2.  2.5 3. ]]
+# Array modulo 2:  [[1 0 1]
+#  [0 1 0]]
+# Array integer divided by 2:  [[0 1 1]
+#  [2 2 3]]
+# Array greater than 5:  [[False False False]
+#  [False False  True]]
+# Array equal to 6:  [[False False False]
+#  [False False  True]]
+# Array plus 100:  [[101 102 103]
+#  [104 105 106]]
 ```
 
-```markdown
-Array to the power of 2:  [[ 1  4  9]
- [16 25 36]]
-Array divided by 2:  [[0.5 1.  1.5]
- [2.  2.5 3. ]]
-Array modulo 2:  [[1 0 1]
- [0 1 0]]
-Array integer divided by 2:  [[0 1 1]
- [2 2 3]]
-Array greater than 5:  [[False False False]
- [False False  True]]
-Array equal to 6:  [[False False False]
- [False False  True]]
-Array plus 100:  [[101 102 103]
- [104 105 106]]
-```
 
-### Index and slice for 1D array
+
+# Index and slice for 1D array
 
 ```python
 import numpy as np
@@ -187,20 +186,21 @@ print("Elements from index 1 to 3: ", a[1:4])    # Slicing using start and end p
 print("Elements from index 0 to end: ", a[:])     # Slicing from start to end
 print("Every second element: ", a[::2])           # Slicing with a step of 2
 print("Reversed array: ", a[::-1])                # Slicing with a negative step
+
+
+# Element at index 0:  1
+# Element at index -1:  5
+# Element at index 2:  3
+# Element at index -3:  3
+# Elements from index 1 to 3:  [2 3 4]
+# Elements from index 0 to end:  [1 2 3 4 5]
+# Every second element:  [1 3 5]
+# Reversed array:  [5 4 3 2 1]
 ```
 
-```markdown
-Element at index 0:  1
-Element at index -1:  5
-Element at index 2:  3
-Element at index -3:  3
-Elements from index 1 to 3:  [2 3 4]
-Elements from index 0 to end:  [1 2 3 4 5]
-Every second element:  [1 3 5]
-Reversed array:  [5 4 3 2 1]
-```
 
-### Index and slice for 2D array
+
+# Index and slice for 2D array
 
 ```python
 import numpy as np
@@ -221,26 +221,26 @@ print("First two rows: ")
 print(a[:2, :])                                        # Slicing the first two rows
 print("Last two columns: ")
 print(a[:, -2:])                                       # Slicing the last two columns
+
+# Element at row 0, column 1:  2
+# Element at row -1, column -2:  8
+# First row:  [1 2 3]
+# Second column:  [2 5 8]
+# Subarray from rows 0 to 1, columns 1 to 2: 
+# [[2 3]
+#  [5 6]]
+# First two rows: 
+# [[1 2 3]
+#  [4 5 6]]
+# Last two columns: 
+# [[2 3]
+#  [5 6]
+#  [8 9]]
 ```
 
-```markdown
-Element at row 0, column 1:  2
-Element at row -1, column -2:  8
-First row:  [1 2 3]
-Second column:  [2 5 8]
-Subarray from rows 0 to 1, columns 1 to 2: 
-[[2 3]
- [5 6]]
-First two rows: 
-[[1 2 3]
- [4 5 6]]
-Last two columns: 
-[[2 3]
- [5 6]
- [8 9]]
-```
 
-### Index and slice for 3D array
+
+# Index and slice for 3D array
 
 ```python
 import numpy as np
@@ -263,27 +263,28 @@ print("Subarray from the second matrix, rows 0 to 1, columns 0 to 1: ")
 print(a[1, 0:2, 0:2])                                  # Slicing a subarray
 print("Last row of the last matrix: ")
 print(a[-1, -1, :])                                     # Slicing the last row of the last matrix
+
+
+# Element at position 1, 0, 1:  6
+# Last element in the last row of the last matrix:  8
+# First matrix: 
+# [[1 2]
+#  [3 4]]
+# Second row of the second matrix: 
+# [7 8]
+# Subarray from the first matrix: 
+# [[1 2]
+#  [3 4]]
+# Subarray from the second matrix, rows 0 to 1, columns 0 to 1: 
+# [[5 6]
+#  [7 8]]
+# Last row of the last matrix: 
+# [7 8]
 ```
 
-```markdown
-Element at position 1, 0, 1:  6
-Last element in the last row of the last matrix:  8
-First matrix: 
-[[1 2]
- [3 4]]
-Second row of the second matrix: 
-[7 8]
-Subarray from the first matrix: 
-[[1 2]
- [3 4]]
-Subarray from the second matrix, rows 0 to 1, columns 0 to 1: 
-[[5 6]
- [7 8]]
-Last row of the last matrix: 
-[7 8]
-```
 
-### Stack and split
+
+# Stack and split
 
 ```py
 import numpy as np
@@ -336,63 +337,65 @@ print(j)
 k = np.dsplit(e, 2)
 print("Depth-wise split arrays: ")
 print(k)
+
+
+# Vertically stacked array: 
+# [[ 1  2  3]
+#  [ 4  5  6]
+#  [ 7  8  9]
+#  [10 11 12]]
+# Horizontally stacked array: 
+# [[ 1  2  3  7  8  9]
+#  [ 4  5  6 10 11 12]]
+# Depth-wise stacked array: 
+# [[[ 1  7]
+#   [ 2  8]
+#   [ 3  9]]
+# 
+#  [[ 4 10]
+#   [ 5 11]
+#   [ 6 12]]]
+# Concatenated array along axis 0: 
+# [[ 1  2  3]
+#  [ 4  5  6]
+#  [ 7  8  9]
+#  [10 11 12]]
+# Vertically stacked array using row_stack: 
+# [[ 1  2  3]
+#  [ 4  5  6]
+#  [ 7  8  9]
+#  [10 11 12]]
+# Horizontally stacked array using column_stack: 
+# [[ 1  2  3  7  8  9]
+#  [ 4  5  6 10 11 12]]
+# Horizontally split arrays: 
+# [array([[1, 2, 3],
+#        [4, 5, 6]]), array([[ 7,  8,  9],
+#        [10, 11, 12]])]
+# Vertically split arrays: 
+# [array([[1, 2, 3],
+#        [4, 5, 6]]), array([[ 7,  8,  9],
+#        [10, 11, 12]])]
+# Depth-wise split arrays: 
+# [array([[[1],
+#         [2],
+#         [3]],
+# 
+#        [[4],
+#         [5],
+#         [6]]]), array([[[ 7],
+#         [ 8],
+#         [ 9]],
+# 
+#        [[10],
+#         [11],
+#         [12]]])]
+
 ```
 
-```markdown
-Vertically stacked array: 
-[[ 1  2  3]
- [ 4  5  6]
- [ 7  8  9]
- [10 11 12]]
-Horizontally stacked array: 
-[[ 1  2  3  7  8  9]
- [ 4  5  6 10 11 12]]
-Depth-wise stacked array: 
-[[[ 1  7]
-  [ 2  8]
-  [ 3  9]]
 
- [[ 4 10]
-  [ 5 11]
-  [ 6 12]]]
-Concatenated array along axis 0: 
-[[ 1  2  3]
- [ 4  5  6]
- [ 7  8  9]
- [10 11 12]]
-Vertically stacked array using row_stack: 
-[[ 1  2  3]
- [ 4  5  6]
- [ 7  8  9]
- [10 11 12]]
-Horizontally stacked array using column_stack: 
-[[ 1  2  3  7  8  9]
- [ 4  5  6 10 11 12]]
-Horizontally split arrays: 
-[array([[1, 2, 3],
-       [4, 5, 6]]), array([[ 7,  8,  9],
-       [10, 11, 12]])]
-Vertically split arrays: 
-[array([[1, 2, 3],
-       [4, 5, 6]]), array([[ 7,  8,  9],
-       [10, 11, 12]])]
-Depth-wise split arrays: 
-[array([[[1],
-        [2],
-        [3]],
 
-       [[4],
-        [5],
-        [6]]]), array([[[ 7],
-        [ 8],
-        [ 9]],
-
-       [[10],
-        [11],
-        [12]]])]
-```
-
-### Broadcasting
+# Broadcasting
 
 ```python
 import numpy as np

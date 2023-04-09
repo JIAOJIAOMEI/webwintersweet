@@ -15,7 +15,7 @@ tags:
   - Machine learning
 ---
 
-### The importance of a loss function
+# The importance of a loss function
 
 The importance of a loss function in machine learning cannot be overstated. Whenever we try to solve a problem, there is always some expected outcome, and the actual outcome will inevitably have some degree of error. The goal of optimization is to minimize this error as much as possible.
 
@@ -25,7 +25,7 @@ In linear regression, we try to find a line that best fits a set of data points.
 
 This is because, in this case, any line we draw will either overestimate or underestimate the data points, leading to some degree of inaccuracy in the fit. Thus, the role of the loss function is to measure this uncertainty and provide feedback to the optimization algorithm to improve the fit of the model.
 
-### Loss function
+# Loss function
 
 A loss function is a function used to measure the difference between an expected value and a predicted value, which is also known as the loss. In simple terms, the loss function quantifies the difference between the expected value and the actual (or predicted) value.
 
@@ -116,7 +116,7 @@ plt.show()
   <img src="Gradient-descend-for-linear-regression/gradient1.png" alt="gradient" width="600" height="400" />
 </p>
 
-### Tug-of-war
+# Tug-of-war
 
 I had a question before about why the loss function in linear regression is represented as a vertical line instead of the distance between the point and the line. **I think of linear regression as a tug-of-war game, where the points on either side of the line are pulling the line in opposite directions.**
 
@@ -126,7 +126,7 @@ The use of a vertical line to represent the residual or error in linear regressi
 
 Overall, the use of these techniques to magnify the errors and make them more apparent is an important step in understanding and improving the performance of the model.
 
-### Euclidean Distance vs Manhattan distance
+# Euclidean Distance vs Manhattan distance
 
 ```python
 import numpy as np
@@ -180,7 +180,7 @@ In practice, the choice of distance metric depends on the number and nature of t
 
 In general, it is a good practice to remove or handle outliers before fitting a linear regression model. 
 
-### Mean squared error
+# Mean squared error
 
 Mean squared error (MSE) is a common measure of the average squared difference between the predicted values and the actual values in regression analysis. It is calculated as the average of the squared differences between the predicted and actual values for each data point. The formula for MSE is:
 $$
@@ -206,7 +206,7 @@ M S E=1 / 2 n * \Sigma(y_i-\hat{y}_i)^2
 $$
 While the additional factor of 1/2 does not change the minimum value of the MSE, it can make the derivative calculation simpler and more efficient. 
 
-### Gradient descend
+# Gradient descend
 
 The derivative is a scalar value that represents the rate of change of a function in one dimension, while the gradient is a vector that represents the rate of change of a function in multiple dimensions.
 
@@ -286,7 +286,7 @@ plt.show()
 
 Learning rate is a hyperparameter that controls the step size taken during each iteration of the gradient descent optimization algorithm. Specifically, it determines how much the model parameters are updated in the direction of the negative gradient of the loss function. A high learning rate results in larger parameter updates and faster convergence, but can also cause the algorithm to overshoot the minimum and oscillate around it, or even diverge. Conversely, a low learning rate results in smaller parameter updates and slower convergence, but can also help the algorithm converge more stably and avoid overshooting.
 
-### Reference
+# Reference
 
 1. Ng, A. (2017). Gradient Descent. In Machine Learning (Week 2). Stanford University. Coursera. https://www.coursera.org/learn/machine-learning
 2. Wikipedia contributors. (2023, March 17). Mean squared error. In Wikipedia, The Free Encyclopedia. Retrieved 14:37, March 28, 2023, from https://en.wikipedia.org/wiki/Mean_squared_error

@@ -11,7 +11,7 @@ tags:
   - Linear algebra
 ---
 
-### Matrix transpose
+# Matrix transpose
 
 The transpose of a matrix is an operation that flips the matrix over its diagonal, i.e., it switches the rows and columns of the matrix. 
 $$
@@ -36,7 +36,7 @@ A^T=\left[\begin{array}{ll}
 $$
 Note that the original matrix $A$ has dimensions $2 \times 3$, while the transpose $\mathrm{A}^{\wedge} \mathrm{T}$ has dimensions $3 \times 2$. This is because the number of rows in A becomes the number of columns in $\mathrm{A}^{\wedge} \mathrm{T}$, and vice versa.
 
-### Vector addition
+# Vector addition
 
 Vector addition is the process of combining two or more vectors into a single vector. The resulting vector is the sum of the individual vectors.
 $$
@@ -56,7 +56,7 @@ $$
 \end{array}\right]
 \end{equation}
 $$
-### Matrix addition
+# Matrix addition
 
 Matrix addition is the process of combining two or more matrices into a single matrix. The resulting matrix is the sum of the individual matrices.
 
@@ -93,7 +93,7 @@ A+B=\left[\begin{array}{cc}
 12 & 7
 \end{array}\right]
 $$
-### Scalar multiplication
+# Scalar multiplication
 
 Scalar multiplication is the process of multiplying a vector or a matrix by a scalar value. The scalar value is a single number that scales or stretches the vector or matrix.
 
@@ -158,7 +158,7 @@ c a_{m 1} & c a_{m 2} & \ldots & c a_{m n}
 \end{array}\right]
 $$
 
-### Linear combination
+# Linear combination
 
 Linear combination is a combination of addition and multiplication.
 
@@ -204,7 +204,7 @@ $$
 35
 \end{array}\right]
 $$
-### Dot product
+## Dot product
 
 Given two vectors $\boldsymbol{v}$ and $\boldsymbol{w}$ of the same dimension, the dot product between $\boldsymbol{v}$ and $\boldsymbol{w}$, denoted as $\boldsymbol{v} \cdot \boldsymbol{w}$, is the sum of the products of the corresponding components:
 $$
@@ -229,7 +229,7 @@ $$
 v \cdot w=(1 \times 4)+(2 \times 5)+(3 \times 6)=32
 $$
 
-### Matrix multiplication
+## Matrix multiplication
 
 Given two matrices A and B, where A has dimensions $m \cdot n$ and B has dimensions $n \cdot p$, the product of A and B, denoted as C, is a matrix with dimensions $m \cdot p$, where the element in row $i$ and column $j$ is obtained by multiplying the $i$-th row of A with the $j$-th column of B, and then summing the resulting products:
 $$
@@ -264,7 +264,7 @@ $$
 \end{array}\right]
 $$
 
-### Identity matrix
+# Identity matrix
 
 The identity matrix, denoted by $\boldsymbol{I}_n$, is a square matrix of dimension $n$ with ones on the main diagonal and zeros everywhere else. In other words, the entry in the $i$-th row and $j$-th column of $\boldsymbol{I}_n$ is:
 $$
@@ -289,7 +289,7 @@ $$
 \end{equation}
 $$
 
-### Matrix inverse
+# Matrix inverse
 
 The inverse of a matrix $\boldsymbol{A}$, denoted as $\boldsymbol{A}^{-1}$, is defined as a matrix such that:
 $$
@@ -317,6 +317,7 @@ $$
 $$
 If the determinant of $\boldsymbol{A}$ is zero, then the matrix $\boldsymbol{A}$ is singular or non-invertible, and it does not have an inverse. 
 
+# Python examples
 ```python
 # Name: Mei Jiaojiao
 # Profession: Artificial Intelligence
@@ -406,7 +407,7 @@ print("Inverse of A:")
 print(B)
 ```
 
-### Reference
+# Reference
 
 1. Strang, G. (2016). Introduction to linear algebra (5th ed.). Wellesley, MA: Wellesley-Cambridge Press.
 2. Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. MIT Press.

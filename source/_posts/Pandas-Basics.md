@@ -13,7 +13,7 @@ tags:
 
 The iris dataset is a well-known multivariate dataset that contains 150 observations of iris flowers. Each observation includes four features: sepal length, sepal width, petal length, and petal width. The dataset also includes the species of the flower, which serves as the response variable. There are three species of iris in the dataset: setosa, versicolor, and virginica. Overall, the iris dataset is commonly used for classification and machine learning tasks, as well as for data visualization and exploratory analysis.
 
-### Basic Operations of Pandas on Iris Dataset
+# Basic Operations of Pandas on Iris Dataset
 
 ```python
 import pandas as pd
@@ -103,7 +103,7 @@ print(df[(df['sepal_width'] > 3.0) & (df['petal_width'] < 1.0)])
 print(df.isnull().values.any())
 ```
 
-### Reference
+# Reference
 
 1. Seaborn. (n.d.). Scatterplot matrix. Retrieved March 28, 2023, from https://seaborn.pydata.org/examples/scatterplot_matrix.html
 2. pandas. (2023). Pandas documentation (Version 1.5.3). Retrieved from https://pandas.pydata.org/docs/

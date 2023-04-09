@@ -11,7 +11,7 @@ tags:
   - RGB
 ---
 
-#### RGB Basics
+# RGB Basics
 
 RGB stands for Red, Green, and Blue, which are the three primary colors of light. The RGB color model works by combining these three primary colors in different ways to create a wide range of colors.
 
@@ -72,7 +72,7 @@ plt.show()
 
 ![rgb_colors](RGB-color/rgb_colors.png)
 
-#### 3D RGB color space
+# 3D RGB color space
 
 ```python
 # Name: Mei Jiaojiao

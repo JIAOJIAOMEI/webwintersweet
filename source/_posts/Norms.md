@@ -11,7 +11,7 @@ tags:
   - Python
 ---
 
-### Norm for a vector
+# Norm for a vector
 
 In linear algebra, the p-norm of a vector $\mathrm{x}$ is a way of measuring the size or magnitude of the vector. The p-norm is defined as:
 $$
@@ -67,20 +67,19 @@ ax.set_xlabel('X')
 ax.set_ylabel('Y')
 plt.savefig('norm.png', dpi=300, bbox_inches='tight', pad_inches=1)
 plt.show()
+
+# (Absolute distance: 4)
+# (Euclidean distance: 2.8284271247461903)
 ```
 
-```markdown
-Absolute distance: 4
-Euclidean distance: 2.8284271247461903
-```
 
 ![norm](Norms/norm.png)
 
 The red and green dashed lines represent the $p=1$ distance, which is the sum of the absolute differences between the coordinates of the two points in each dimension. The black dashed line represents the $p=2$ distance, which is the Euclidean distance between the two points.
 
-### Norm for a matrix
+# Norm for a matrix
 
-#### Frobenius norm
+## Frobenius norm
 
 The Frobenius norm of a matrix $\mathrm{A}$ is a way of measuring the "size" or "magnitude" of the matrix. It is defined as the square root of the sum of the squares of all the elements in the matrix:
 $$
@@ -106,13 +105,10 @@ A = np.array([[1, 2], [3, 4], [5, 6]])
 # Calculate the Frobenius norm
 f_norm = np.linalg.norm(A, 'fro')
 print("Frobenius norm:", f_norm)
+# Frobenius norm: 9.539392014169456
 ```
 
-```markdown
-Frobenius norm: 9.539392014169456
-```
-
-#### Spectral norm
+## Spectral norm
 
 The Spectral norm of a matrix $\mathrm{A}$ is defined as the maximum singular value of $\mathrm{A}$, denoted as:
 $$
@@ -138,13 +134,11 @@ U, s, V = np.linalg.svd(A)
 # Calculate the spectral norm
 s_norm = s[0]
 print("Spectral norm:", s_norm)
+# Spectral norm: 9.525518091565107
 ```
 
-```markdown
-Spectral norm: 9.525518091565107
-```
 
-#### Other norms
+# Other norms
 
 $$
 \begin{equation}
@@ -174,7 +168,7 @@ $$
 \end{aligned}
 $$
 
-### Reference
+# Reference
 
 1. Wikipedia contributors. (2022, March 27). Matrix norm. In Wikipedia. Retrieved March 27, 2022, from https://en.wikipedia.org/wiki/Matrix_norm
 2. Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.

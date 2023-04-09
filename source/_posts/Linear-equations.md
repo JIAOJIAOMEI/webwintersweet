@@ -12,11 +12,11 @@ tags:
   - Matrix
 ---
 
-### Linear system
+# Linear system
 
 **The number of equations is the same as the number of unknowns.**
 
-#### Example: Two equations in Two unknowns
+## Example
 
 $$
 \begin{aligned}
@@ -84,14 +84,13 @@ x = np.linalg.inv(A).dot(b)
 # Print the solution
 print('x =', x[0])
 print('y =', x[1])
+
+# x = 3.0
+# y = 1.0
 ```
 
-```markdown
-x = 3.0
-y = 1.0
-```
 
-### Singular system
+# Singular system
 
 A singular system of linear equations is a system of equations that has no unique solution or has infinitely many solutions.
 $$

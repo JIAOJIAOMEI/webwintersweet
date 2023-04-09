@@ -22,7 +22,7 @@ The code is a Python script that uses computer vision techniques to perform the 
 
 This type of technology can be used for various applications such as traffic monitoring, security surveillance, and vehicle tracking systems. It can help in detecting and preventing accidents, tracking stolen vehicles, and optimizing traffic flow.
 
-### Load the video
+# Load the video
 
 ```python
 # Name: Mei Jiaojiao
@@ -59,7 +59,7 @@ cv2.destroyAllWindows()
 
 <p align="center"> <img src="Vehicle-Detection-and-Counting-Using-OpenCV/image-20230401155315817.png" alt="image-20230401155315817" style="zoom:20%;" /> </p>
 
-### Background Subtraction in OpenCV
+# Background Subtraction in OpenCV
 
 ```python
 # Name: Mei Jiaojiao
@@ -101,7 +101,7 @@ cv2.destroyAllWindows()
 
 <p align="center"> <img src="Vehicle-Detection-and-Counting-Using-OpenCV/image-20230401155430619.png" alt="image-20230401155430619" style="zoom:20%;" /> </p>
 
-### Detection and counting
+# Detection and counting
 
 ```python
 # Name: Mei Jiaojiao
@@ -208,7 +208,7 @@ cv2.destroyAllWindows()
 
 The original video can be accessed at https://drive.google.com/file/d/1PQYkSYX-Hgd-CJ0kBhg-BxV_IJ0gOjje/view?usp=sharing. The results can be viewed at https://drive.google.com/file/d/1xG46InzwV0b1wVy7L4SEWSyYh-pEUclN/view?usp=sharing.
 
-### Improvements
+# Improvements
 
 The current issue with the program is that if multiple vehicles cross the line, the count may not be accurate. To improve the accuracy, two possible solutions are:
 
@@ -217,7 +217,7 @@ The current issue with the program is that if multiple vehicles cross the line, 
 
 Both of these solutions can potentially improve the accuracy of the vehicle counting system.
 
-### Tracking and counting
+# Tracking and counting
 
 The YOLOv7-DeepSORT-Object-Tracking is a computer vision project that utilizes the YOLOv7 object detection algorithm and DeepSORT object tracking algorithm to detect and track objects in real-time video streams.The project can be found on GitHub at https://github.com/MuhammadMoinFaisal/YOLOv7-DeepSORT-Object-Tracking. 
 
@@ -227,7 +227,7 @@ I have tested it and the results can be viewed at https://drive.google.com/file/
     <img src="Vehicle-Detection-and-Counting-Using-OpenCV/image-20230402154048465.png" alt="image-20230402154048465" style="margin:auto">
 </div>
 
-### Reference
+# Reference
 
 1. Joshi, P. (2020, April 20). *Build your own Vehicle Detection Model using OpenCV and Python*. Analytics Vidhya. https://www.analyticsvidhya.com/blog/2020/04/vehicle-detection-opencv-python/
 1. M. (2023, January 26). *GitHub - MuhammadMoinFaisal/YOLOv7-DeepSORT-Object-Tracking: YOLOv7 Object Tracking using PyTorch, OpenCV and DeepSORT*. GitHub. https://github.com/MuhammadMoinFaisal/YOLOv7-DeepSORT-Object-Tracking

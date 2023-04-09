@@ -14,7 +14,7 @@ tags:
   - Rosenbrock
 ---
 The code consists of four examples of optimization using Scipy library in Python. The first example shows how to use Brent's method to minimize a quadratic function, both the function and the progress of optimization are plotted. The second example shows how to use Brent's method to minimize a non-convex function, again, the function and the progress of optimization are plotted. The third example shows how to use Conjugate Gradient (CG) method to minimize the Rosenbrock function, a famous benchmark function for optimization. The results are plotted in 3D surface plot, contour plot, and iterations plot. The fourth example shows how to optimize the Rosenbrock function using various methods, including gradient-based methods, trust-region methods, and global optimization methods. The progress of optimization is plotted for each method. The computing time for each method is also recorded and printed.
-### Brent’s method on a quadratic function
+# Brent’s method on a quadratic function
 
 ```python
 # Name: Mei Jiaojiao
@@ -58,7 +58,7 @@ plt.show()
 
 ![minimize_scalar](Scipy-optimization/minimize_scalar.png)
 
-### Brent’s method on a non-convex function
+# Brent’s method on a non-convex function
 
 ```python
 # Name: Mei Jiaojiao
@@ -112,7 +112,7 @@ plt.show()
 
 ![minimize_scalar1](Scipy-optimization/minimize_scalar1.png)
 
-### Minimizing Rosenbrock Function with Conjugate Gradient (CG) Method
+# Minimizing Rosenbrock Function with Conjugate Gradient (CG) Method
 
 ```python
 # Name: Mei Jiaojiao
@@ -182,7 +182,7 @@ plt.show()
 
 ![minimize_rosenbrock](Scipy-optimization/minimize_rosenbrock.png)
 
-### Optimization of the Rosenbrock function using various methods
+# Optimization of the Rosenbrock function using various methods
 
 ```python
 # Name: Mei Jiaojiao
@@ -314,7 +314,7 @@ plt.show()
 
 ![minimize_rosenbrock_methods](Scipy-optimization/minimize_rosenbrock_methods.png)
 
-### Reference
+# Reference
 
 1. *Scipy Lecture Notes — Scipy lecture notes*. (n.d.). Scipy Lecture Notes — Scipy Lecture Notes. https://scipy-lectures.org/index.html#one-document-to-learn-numerics-science-and-data-with-python
 

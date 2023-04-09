@@ -12,7 +12,7 @@ tags:
   - Python
   - Basics
 ---
-### Unions, intersections, and complements
+# Unions, intersections, and complements
 
 ```python
 # Name: Mei Jiaojiao
@@ -62,7 +62,7 @@ plt.show()
 <div style="text-align:center">
     <img src="Relationships-between-two-Sets/Venn%20Diagrams%20for%20numbers.png" alt="Venn Diagrams for numbers" style="zoom:67%;" />
 </div>
-###  Cardinality
+#  Cardinality
 
 $$
 \begin{equation}
@@ -103,21 +103,19 @@ plt.annotate('|A|', xy=(-0.6, 0), fontsize=14)
 plt.annotate('|B|', xy=(0.5, 0), fontsize=14)
 plt.savefig('Venn Diagrams for cardinality.png', dpi=300, bbox_inches='tight', pad_inches=0.1)
 plt.show()
+
+
+# |A| = 5
+# |B| = 5
+# |A ∩ B| = 2
+# |A ∪ B| = 8
+# |A| + |B| - |A ∩ B| = 8
 ```
 
 <div style="text-align:center"> <img src="Relationships-between-two-Sets/Venn%20Diagrams%20for%20cardinality.png" alt="Venn Diagrams for cardinality" style="zoom:37%;" /> </div>
 
 
-
-```markdown
-|A| = 5
-|B| = 5
-|A ∩ B| = 2
-|A ∪ B| = 8
-|A| + |B| - |A ∩ B| = 8
-```
-
-### Cartesian product
+# Cartesian product
 
 > The Cartesian product of two sets $A$ and $B$ is the set
 > $$
@@ -159,7 +157,7 @@ plt.show()
 <div style="text-align:center"> <img src="Relationships-between-two-Sets/Cartesian%20Product%20of%20A%20and%20B.png" alt="Cartesian Product of A and B" style="zoom:33%;" /> </div>
 
 
-### Reference
+# Reference
 
 1. Blitzstein, J. K., & Hwang, J. (2019). Introduction to Probability (2nd ed.). CRC Press.
 
