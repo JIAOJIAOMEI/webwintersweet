@@ -4,7 +4,7 @@ mathjax: true
 hidden: false
 comments: true
 date: 2023-04-15 06:33:56
-categories: Basic Math
+categories: Basic math
 tags:
 description: 一些数学基本概念
 top:
