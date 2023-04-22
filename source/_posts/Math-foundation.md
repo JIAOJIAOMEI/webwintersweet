@@ -3,9 +3,9 @@ title: Math foundation
 hidden: false
 comments: true
 date: 2023-04-15 06:33:56
-categories:
+categories: Basic Math
 tags:
-description:
+description: 一些数学基本概念
 top:
 ---
 
