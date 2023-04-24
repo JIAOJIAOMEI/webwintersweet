@@ -431,7 +431,7 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Ysabeau
+    family: Noto Serif Simplified Chinese
     size: 12px
 
   # Font settings for site title (.site-title).
