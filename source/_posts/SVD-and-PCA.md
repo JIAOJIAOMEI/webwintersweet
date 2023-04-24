@@ -18,7 +18,7 @@ description: 这篇博客介绍了 Singular Value Decomposition (SVD) 和 Princi
 top: 10
 ---
 
-# SingularValueDecomposition
+# SVD分解
 
 Let A be an $m \times n$ matrix. Then $A=U \Sigma V^T$ is the single value decomposition of A.
 - $U$ is an $m \times n$ orthogonal matrix with columns equal to the unit eigenvectors of $A A^T$.
@@ -33,8 +33,6 @@ Let A be an $m \times n$ matrix. Then $A=U \Sigma V^T$ is the single value decom
 ![image-20230424232100962](SVD-and-PCA/image-20230424232100962.png)
 
 错了，不是这样子的。要一步一步算😂。
-
-## $V^T$
 
 首先计算$A^T \cdot A$
 $$
@@ -323,8 +321,6 @@ V=\left[\begin{array}{ccc}
 \end{array}\right]
 $$
 
-## $\Sigma$
-
 $$
 \lambda_1=16, \lambda_2=6, \lambda_3=0
 $$
@@ -335,11 +331,9 @@ $A^T A$ 和 $A A^T$ 的特征值eigenvalues是一样的。
 $$
 \begin{gathered}
 \sigma_1=\sqrt{\lambda_1}=\sqrt{16}=4 \\
-\sigma_2=\sqrt{\lambda_2}=\sqrt{6}
+\sigma_2=\sqrt{\lambda_2}=\sqrt{6}\\
 \end{gathered}
 $$
-
-## $U$
 
 $$
 \begin{gathered}
@@ -388,8 +382,6 @@ A \vec{v}_2=\sigma_2 \vec{u}_2 \rightarrow \vec{u}_2=\frac{1}{\sigma_2} A \vec{v
 -1 / \sqrt{2}
 \end{array}\right]
 $$
-
-## SVD
 
 $$
 A=U \Sigma V^T
