@@ -36,6 +36,7 @@ Let A be an $m \times n$ matrix. Then $A=U \Sigma V^T$ is the single value decom
 
 首先计算$A^T \cdot A$
 $$
+\begin{equation}
 A^T A=\left[\begin{array}{cc}
 1 & 3 \\
 -1 & 1 \\
@@ -48,9 +49,11 @@ A^T A=\left[\begin{array}{cc}
 2 & 2 & -2 \\
 6 & -2 & 10
 \end{array}\right]
+\end{equation}
 $$
 然后计算determinant
 $$
+\begin{equation}
 \begin{gathered}
 \operatorname{det}\left(\left[\begin{array}{ccc}
 10 & 2 & 6 \\
@@ -69,11 +72,13 @@ $$
 \lambda(\lambda-16)(\lambda-6)=0 \\
 \lambda_1=\mathbf{1 6}, \lambda_2=\mathbf{6}, \lambda_3=\mathbf{0}
 \end{gathered}
+\end{equation}
 $$
 $\lambda$ 从大到小排列。
 
 求$\lambda = 16$ 的时候的eigenvector
 $$
+\begin{equation}
 \begin{gathered}
 \boldsymbol{\lambda}_{\mathbf{1}}=\mathbf{1 6} \\
 (\boldsymbol{A}-\lambda \boldsymbol{I}) \overrightarrow{\boldsymbol{x}}=\overrightarrow{0}\\
@@ -105,6 +110,7 @@ x_3
 6 & -2 & -6 & 0
 \end{array}\right]}
 \end{gathered}
+\end{equation}
 $$
 化简
 $$
@@ -120,6 +126,7 @@ $$
 $$
 
 $$
+\begin{equation}
 \begin{gathered}
 \begin{array}{cc}
 x_1-x_3=0 & x_1=t \\
@@ -145,12 +152,14 @@ t
 \frac{\mathbf{1}}{\sqrt{2}}
 \end{array}\right]
 \end{gathered}
+\end{equation}
 $$
 
 这里的向量是单位向量，就是模为1。
 
 然后计算$\lambda=6$的时候的eigenvector
 $$
+\begin{equation}
 \begin{gathered}
 \boldsymbol{\lambda}_2=\mathbf{6} \\
 (\boldsymbol{A}-\lambda \boldsymbol{I}) \overrightarrow{\boldsymbol{x}}=\overrightarrow{0}\\
@@ -177,6 +186,7 @@ x_3
 0
 \end{array}\right]}
 \end{gathered}
+\end{equation}
 $$
 
 $$
@@ -249,6 +259,7 @@ x_3
 $$
 
 $$
+\begin{equation}
 \left[\begin{array}{cccc}
 10 & 2 & 6 & 0 \\
 2 & 2 & -2 & 0 \\
@@ -258,9 +269,11 @@ $$
 0 & 1 & -2 & 0 \\
 0 & 0 & 0 & 0
 \end{array}\right]
+\end{equation}
 $$
 
 $$
+\begin{equation}
 \begin{array}{cc}
 x_1+x_3=0 & x_1=-t \\
 x_2-2 x_3=0 & x_2=2 t \\
@@ -274,13 +287,15 @@ t
 2 \\
 1
 \end{array}\right]
+\end{equation}
 $$
 
 $$
-\boldsymbol{t} \neq \mathbf{0} \\
+\boldsymbol{t} \neq \mathbf{0}
 $$
 
 $$
+\begin{equation}
 \vec{v}_3=1 / \sqrt{6}\left[\begin{array}{c}
 -1 \\
 2 \\
@@ -290,10 +305,12 @@ $$
 \frac{2}{\sqrt{6}} \\
 \frac{1}{\sqrt{6}}
 \end{array}\right]
+\end{equation}
 $$
 
 结合起来就是
 $$
+\begin{equation}
 \vec{v}_1=\left[\begin{array}{c}
 \frac{1}{\sqrt{2}} \\
 0 \\
@@ -307,9 +324,11 @@ $$
 \frac{2}{\sqrt{6}} \\
 \frac{1}{\sqrt{6}}
 \end{array}\right]
+\end{equation}
 $$
 
 $$
+\begin{equation}
 V=\left[\begin{array}{ccc}
 \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{6}} \\
 0 & -\frac{1}{\sqrt{3}} & \frac{2}{\sqrt{6}} \\
@@ -319,6 +338,7 @@ V=\left[\begin{array}{ccc}
 -\frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
 -\frac{1}{\sqrt{6}} & \frac{2}{\sqrt{6}} & \frac{1}{\sqrt{6}}
 \end{array}\right]
+\end{equation}
 $$
 
 $$
@@ -329,18 +349,22 @@ $A^T A$ 和 $A A^T$ 的特征值eigenvalues是一样的。
 
 从大到小排列是:
 $$
+\begin{equation}
 \begin{gathered}
 \sigma_1=\sqrt{\lambda_1}=\sqrt{16}=4 \\
 \sigma_2=\sqrt{\lambda_2}=\sqrt{6}\\
 \end{gathered}
+\end{equation}
 $$
 
 $$
+\begin{equation}
 \begin{gathered}
 A=U \Sigma V^T \\
 A V=U \Sigma V^T V \\
 A V=U \Sigma I
 \end{gathered}
+\end{equation}
 $$
 
 因为$V$ and $V^T$ 是正交矩阵，所以$V^T V=I$，那么有
@@ -349,13 +373,16 @@ A V=U \Sigma
 $$
 
 $$
+\begin{equation}
 \begin{aligned}
 & A \vec{v}_1=\sigma_1 \vec{u}_1 \\
 & A \vec{v}_2=\sigma_2 \vec{u}_2
 \end{aligned}
+\end{equation}
 $$
 
 $$
+\begin{equation}
 A \vec{v}_1=\sigma_1 \vec{u}_1 \rightarrow \vec{u}_1=\frac{1}{\sigma_1} A \vec{v}_1=\frac{1}{4}\left[\begin{array}{ccc}
 1 & -1 & 3 \\
 3 & 1 & 1
@@ -367,9 +394,11 @@ A \vec{v}_1=\sigma_1 \vec{u}_1 \rightarrow \vec{u}_1=\frac{1}{\sigma_1} A \vec{v
 1 / \sqrt{2} \\
 1 / \sqrt{2}
 \end{array}\right]
+\end{equation}
 $$
 
 $$
+\begin{equation}
 A \vec{v}_2=\sigma_2 \vec{u}_2 \rightarrow \vec{u}_2=\frac{1}{\sigma_2} A \vec{v}_2=\frac{1}{\sqrt{6}}\left[\begin{array}{ccc}
 1 & -1 & 3 \\
 3 & 1 & 1
@@ -381,6 +410,7 @@ A \vec{v}_2=\sigma_2 \vec{u}_2 \rightarrow \vec{u}_2=\frac{1}{\sigma_2} A \vec{v
 1 / \sqrt{2} \\
 -1 / \sqrt{2}
 \end{array}\right]
+\end{equation}
 $$
 
 $$
@@ -388,6 +418,7 @@ A=U \Sigma V^T
 $$
 
 $$
+\begin{equation}
 \left[\begin{array}{ccc}
 1 & -1 & 3 \\
 3 & 1 & 1
@@ -402,6 +433,7 @@ $$
 -\frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
 -\frac{1}{\sqrt{6}} & \frac{2}{\sqrt{6}} & \frac{1}{\sqrt{6}}
 \end{array}\right]
+\end{equation}
 $$
 
 # SVD on Boston dataset
