@@ -51,7 +51,6 @@
 {{ next_font() }}
 <link rel="stylesheet" href="{{ theme.vendors.fontawesome }}">
 
-### 添加
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Roboto&display=swap" rel="stylesheet">
 
 {%- set font_awesome_uri = theme.vendors.fontawesome or next_vendors('font-awesome/css/font-awesome.min.css') %}
