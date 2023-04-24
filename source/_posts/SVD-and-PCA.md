@@ -14,7 +14,7 @@ tags:
   - Machine learning
   - Deep learning
   - Artificial intelligence
-description: 这篇博客介绍了 Singular Value Decomposition (SVD) 和 Principal Component Analysis (PCA) 的原理和 Python 实现，其中 SVD 分解了一个矩阵成为三个矩阵 $U$,$\Sigma$ 和 $V^T$，而 PCA 则利用 SVD 将数据投影到一个低维空间，以降低数据的维度。
+description: 这篇博客介绍了 Singular Value Decomposition (SVD) 和 Principal Component Analysis (PCA) 的原理和 Python 实现，其中 SVD 分解了一个矩阵成为三个矩阵，而 PCA 则利用 SVD 将数据投影到一个低维空间，以降低数据的维度。
 top: 10
 ---
 
