@@ -438,13 +438,13 @@ font:
   title:
     external: true
     family: Lato
-    size: 16px
+    size: 14px
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
     family: Roboto Slab
-    size: 14px
+    size: 13px
 
   # Font settings for posts (.post-body).
   posts:
