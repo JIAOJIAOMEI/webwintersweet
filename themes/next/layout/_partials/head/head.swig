@@ -49,9 +49,6 @@
 <link rel="stylesheet" href="{{ url_for(theme.css) }}/main.css">
 
 {{ next_font() }}
-<link rel="stylesheet" href="{{ theme.vendors.fontawesome }}">
-
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Roboto&display=swap" rel="stylesheet">
 
 {%- set font_awesome_uri = theme.vendors.fontawesome or next_vendors('font-awesome/css/font-awesome.min.css') %}
 <link rel="stylesheet" href="{{ font_awesome_uri }}">
