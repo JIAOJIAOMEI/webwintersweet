@@ -437,13 +437,13 @@ font:
   # Font settings for site title (.site-title).
   title:
     external: true
-    family: Proza Libre, Noto Serif Simplified Chinese
+    family: Roboto Slab
     size: 16px
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
-    family: Roboto Slab
+    family: Proza Libre, Noto Serif Simplified Chinese
     size: 13px
 
   # Font settings for posts (.post-body).
