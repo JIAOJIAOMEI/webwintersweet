@@ -67,7 +67,7 @@ $$
 6 & -2 & 10-\lambda
 \end{array}\right]\right)=0\\
 \lambda(\lambda-16)(\lambda-6)=0 \\
-\lambda_1=\mathbf{1 6}, \lambda_2=\mathbf{6}, \lambda_3=\mathbf{0}\\
+\lambda_1=\mathbf{1 6}, \lambda_2=\mathbf{6}, \lambda_3=\mathbf{0}
 \end{gathered}
 $$
 $\lambda$ 从大到小排列。
