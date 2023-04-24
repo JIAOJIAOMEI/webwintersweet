@@ -431,7 +431,8 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Monda, Noto Serif SC
+#    family: Monda, Noto Serif SC
+    family: Noto Serif SC
     size: 12px
 
   # Font settings for site title (.site-title).
@@ -449,7 +450,8 @@ font:
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: Times New Roman, Noto Serif SC
+#    family: Times New Roman, Noto Serif SC
+    family: Noto Serif SC
     size: 12px
 
   # Font settings for <code> and code blocks.
