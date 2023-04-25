@@ -18,12 +18,19 @@ description: 这篇博客介绍了 Singular Value Decomposition (SVD) 和 Princi
 top: 10
 ---
 
-# SVD分解
+# SVD
 
-Let A be an $m \times n$ matrix. Then $A=U \Sigma V^T$ is the single value decomposition of A.
-- $U$ is an $m \times m$ orthogonal matrix with columns equal to the unit eigenvectors of $A A^T$.
-- $V$ is an $n \times n$ orthogonal matrix whose columns are unit eigenvectors of $A^T A$.
-- $\Sigma$ is an $m \times n$ matrix with the singular values of $\mathrm{A}$ on the main diagonal and all other entries of zero.
+ Let $A$ be any $m \times n$ matrix. Then there are orthogonal matrices $U, V$ and a diagonal matrix $\Sigma$ such that
+$$
+A=U \Sigma V^T
+$$
+
+- The columns of $U$ are the eigenvectors of $A A^T$
+- The columns of $V$ are the eigenvectors of $A^T A$.
+- The diagonal elements of $\Sigma$ are the singular values, $\sigma_i=\sqrt{\lambda_i}$
+- singular values (largest to smallest)
+
+# SVD分解例子
 
 现在有矩阵$A=\left[\begin{array}{ccc}
 1 & -1 & 3 \\
