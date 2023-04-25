@@ -22,13 +22,12 @@ top: 10
 
  Let $A$ be any $m \times n$ matrix. Then there are orthogonal matrices $U, V$ and a diagonal matrix $\Sigma$ such that
 $$
-A=U \Sigma V^T
+A_{m n}=U_{m m} \Sigma_{m n} V_{n n}^T
 $$
 
-- The columns of $U$ are the eigenvectors of $A A^T$
-- The columns of $V$ are the eigenvectors of $A^T A$.
-- The diagonal elements of $\Sigma$ are the singular values, $\sigma_i=\sqrt{\lambda_i}$
-- singular values (largest to smallest)
+- The columns of $U$ are the orthonormal eigenvectors of $A A^T$
+- The columns of $V$ are the orthonormal eigenvectors of $A^T A$.
+- The diagonal elements of $\Sigma$ are the square roots of eigenvalues from $U$ or $V$ in descending order.
 
 # SVD分解例子
 
