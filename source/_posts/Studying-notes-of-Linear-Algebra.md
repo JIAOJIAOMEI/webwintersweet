@@ -4,8 +4,13 @@ mathjax: true
 hidden: false
 comments: true
 date: 2023-04-25 07:39:28
-categories:
+categories: Math
 tags:
+  - WolframAlpha
+  - Machine learning
+  - Artificial intelligence
+  - Matrix
+  - Linear algebra
 description:
-top:
+top: 10
 ---

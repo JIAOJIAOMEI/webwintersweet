@@ -21,7 +21,7 @@ top: 10
 # SVD分解
 
 Let A be an $m \times n$ matrix. Then $A=U \Sigma V^T$ is the single value decomposition of A.
-- $U$ is an $m \times n$ orthogonal matrix with columns equal to the unit eigenvectors of $A A^T$.
+- $U$ is an $m \times m$ orthogonal matrix with columns equal to the unit eigenvectors of $A A^T$.
 - $V$ is an $n \times n$ orthogonal matrix whose columns are unit eigenvectors of $A^T A$.
 - $\Sigma$ is an $m \times n$ matrix with the singular values of $\mathrm{A}$ on the main diagonal and all other entries of zero.
 
